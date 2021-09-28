@@ -609,6 +609,7 @@
             android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:layout_marginEnd="5dp"
+
             android:src="@drawable/img_home_viewpager_exp2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -620,6 +621,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/ic_main_facebook_btn"
             app:layout_constraintTop_toBottomOf="@id/home_viewpager_exp2_iv"
             app:layout_constraintStart_toStartOf="parent"
@@ -627,6 +629,7 @@
             />
 
         <ImageView
+            android:layout_marginTop="5dp"
             android:id="@+id/home_btn_instagram_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -637,6 +640,7 @@
             />
 
         <ImageView
+            android:layout_marginTop="5dp"
             android:id="@+id/home_btn_youtube_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -647,6 +651,7 @@
             />
 
         <ImageView
+            android:layout_marginTop="5dp"
             android:id="@+id/home_btn_twitter_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
