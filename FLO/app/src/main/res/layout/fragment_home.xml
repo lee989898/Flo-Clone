@@ -166,10 +166,32 @@
             app:layout_constraintStart_toStartOf="parent"
             />
 
+        <TextView
+            android:id="@+id/home_today_album_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/home_background_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="오늘 발매 음악"
+            />
 
-
+        <ImageView
+            android:id="@+id/home_today_btn_more_iv"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:src="@drawable/btn_arrow_more"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/home_today_album_text_tv"
+            app:layout_constraintTop_toTopOf="@id/home_today_album_text_tv"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>
+
