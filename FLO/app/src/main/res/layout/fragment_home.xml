@@ -219,7 +219,7 @@
         <HorizontalScrollView
             android:id="@+id/home_horScrollView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="210dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_today_album_text_tv">
@@ -236,6 +236,8 @@
                     app:cardCornerRadius="15dp"
                     app:cardElevation="0dp">
 
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -247,6 +249,7 @@
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_album_exp2" />
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -340,12 +343,15 @@
 
         </HorizontalScrollView>
 
+
+
         <ImageView
             android:id="@+id/home_viewpager_iv"
+            android:background="@drawable/round"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/img_home_viewpager_exp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />
@@ -365,7 +371,7 @@
         <HorizontalScrollView
             android:id="@+id/home_horScrollView_02"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="210dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_viewpager_iv">
@@ -502,7 +508,7 @@
         <HorizontalScrollView
             android:id="@+id/home_horScrollView_03"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="210dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_video_collection_tv">
@@ -591,6 +597,8 @@
 
         </HorizontalScrollView>
 
+
+
         <ImageView
             android:id="@+id/home_discovey_banner_iv"
             android:layout_width="match_parent"
@@ -605,12 +613,14 @@
         <ImageView
             android:id="@+id/home_viewpager_exp2_iv"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
+            android:background="@drawable/round"
             android:scaleType="centerCrop"
             android:src="@drawable/img_home_viewpager_exp2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_discovey_banner_iv" />
 
@@ -619,7 +629,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_main_facebook_btn"
             app:layout_constraintEnd_toStartOf="@id/home_btn_instagram_iv"
             app:layout_constraintStart_toStartOf="parent"
@@ -629,7 +639,7 @@
             android:id="@+id/home_btn_instagram_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_main_instagram_btn"
             app:layout_constraintEnd_toStartOf="@id/home_btn_youtube_iv"
             app:layout_constraintStart_toEndOf="@id/home_btn_facebook_iv"
@@ -639,7 +649,7 @@
             android:id="@+id/home_btn_youtube_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_main_youtube_btn"
             app:layout_constraintEnd_toStartOf="@id/home_btn_twitter_iv"
             app:layout_constraintStart_toEndOf="@id/home_btn_instagram_iv"
@@ -649,7 +659,7 @@
             android:id="@+id/home_btn_twitter_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:src="@drawable/ic_main_twitter_btn"
             app:layout_constraintEnd_toEndOf="parent"
