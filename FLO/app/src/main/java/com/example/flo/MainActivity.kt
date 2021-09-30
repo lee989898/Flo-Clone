@@ -1,16 +1,40 @@
 package com.example.flo
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+        val song = Song(binding.mainMiniPlayerTitleTv.text.toString(), binding.mainMiniplayerTitletv.text.toString() )
+
+        Log.d(tag"Log test", song.title + song.title)
+
+
+        binding.mainMiniplayerBtn.setOnClickListener {
+           //startActivity(Intent(this,SongActivity::class.java))
+
+            val intent = Intent(this, SongActivity::class.java)
+            intent.putExtra("title", song.title)
+            intent.putExtra("singer", song.singer)
+
+
+            startActivity(intent)
+        }
+
         initNavigation()
 
         binding.mainBnv.setOnItemSelectedListener {

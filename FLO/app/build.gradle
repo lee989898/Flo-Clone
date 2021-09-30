@@ -6,9 +6,7 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-    viewBinding {
-        enabled = true
-    }
+
     defaultConfig {
         applicationId "com.example.flo"
         minSdkVersion 21
@@ -31,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding{
+        enabled = true
     }
 }
 
