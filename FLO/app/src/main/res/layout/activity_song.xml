@@ -31,7 +31,7 @@
         android:scaleType="fitXY"/>
 
     <ImageButton
-        android:id="@+id/song_btn_down_ib"
+        android:id="@+id/song_down_ib"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/nugu_btn_down"
@@ -43,6 +43,7 @@
         android:scaleType="fitXY"/>
 
     <ImageButton
+        android:id="@+id/song_more_ib"
         android:layout_width="25dp"
         android:layout_height="30dp"
         android:src="@drawable/btn_player_more"
@@ -51,9 +52,34 @@
         android:layout_marginEnd="20dp"
         android:background="@color/white"
         android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@id/song_btn_down_ib"
-
+        app:layout_constraintTop_toBottomOf="@id/song_down_ib"
         />
 
+    <TextView
+        android:id="@+id/song_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="라일락"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/song_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이유 (IU)"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_title_tv"
+        android:layout_marginTop="10dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
