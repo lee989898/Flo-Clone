@@ -30,5 +30,30 @@
         android:background="@color/white"
         android:scaleType="fitXY"/>
 
+    <ImageButton
+        android:id="@+id/song_btn_down_ib"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/nugu_btn_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:src="@drawable/btn_player_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/song_btn_down_ib"
+
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
