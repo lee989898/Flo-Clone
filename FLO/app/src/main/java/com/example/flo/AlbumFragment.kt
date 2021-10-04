@@ -20,13 +20,13 @@ class AlbumFragment : Fragment() {
 
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
-        binding.albumBackIv.setOnClickListenr{
+        binding.albumArrowBlackIb.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
         }
 
-        binding.songLilaclayout.setOnClcikLister{
+        binding.albumLailacLayout.setOnClickListener{
             Toast.makeText(activity, "라일락", Toast.LENGTH_SHORT).show()
         }
 
