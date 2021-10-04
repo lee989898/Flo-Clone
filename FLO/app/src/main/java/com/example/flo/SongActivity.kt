@@ -7,7 +7,6 @@ import com.example.flo.databinding.ActivitySongBinding
 
 class SongActivity : AppCompatActivity() {
 
-
     lateinit var binding : ActivitySongBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,15 +19,15 @@ class SongActivity : AppCompatActivity() {
             binding.songsingenrnametv.text = intent.getStringExtra("singer")
         }
 
-        binding.songDownIb.setonClickListener{
+        binding.songDownIb.setOnClickListener{
             finish()
         }
 
-        binding.songMiniplayerIv.setOnClcikListener{
+        binding.songMiniplayerIv.setOnClickListener{
             setPlayerStatus(false)
         }
 
-        binding.songPauseIv.setOnClcikListener{
+        binding.songPauseIv.setOnClickListener{
             setPlayerStatus(true)
         }
 
@@ -38,10 +37,10 @@ class SongActivity : AppCompatActivity() {
 
     fun setPlayerStatus(isPlaying : Boolean){
         if(isPlaying){
-            binding.songMiniPlayerIv.visibility = View.VISIBLE
+            binding.songMiniplayerIv.visibility = View.VISIBLE
             binding.songPauseIv.visibility = View.GONE
         }else{
-            binding.songMiniPlayerIv.visibility = View.GONE
+            binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }
     }
