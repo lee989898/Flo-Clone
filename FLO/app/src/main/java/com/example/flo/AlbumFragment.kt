@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentAlbumBinding
 
@@ -77,6 +78,20 @@ class AlbumFragment : Fragment() {
             toggleStatus(false)
         }
 
+        binding.albumSongListTv.setOnClickListener {
+            informationStatus(1)
+        }
+
+        binding.albumSongDetailTv.setOnClickListener {
+            informationStatus(2)
+        }
+
+
+        binding.albumSongMvTv.setOnClickListener {
+            informationStatus(3)
+        }
+
+
 
 
         return binding.root
@@ -92,6 +107,30 @@ class AlbumFragment : Fragment() {
             binding.albumToggleOnIv.visibility = View.GONE
 
         }
+
+    }
+
+    private fun informationStatus(whichInformation : Int){
+
+        when(whichInformation){
+            1 -> {
+                binding.albumSongListTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.blue))
+                binding.albumSongDetailTv.setTextColor(Color.BLACK)
+                binding.albumSongMvTv.setTextColor(Color.BLACK)
+            }
+            2 -> {
+                binding.albumSongListTv.setTextColor(Color.BLACK)
+                binding.albumSongDetailTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.blue))
+                binding.albumSongMvTv.setTextColor(Color.BLACK)
+
+            }
+            else -> {
+                binding.albumSongListTv.setTextColor(Color.BLACK)
+                binding.albumSongDetailTv.setTextColor(Color.BLACK)
+                binding.albumSongMvTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.blue))
+            }
+        }
+
 
     }
 

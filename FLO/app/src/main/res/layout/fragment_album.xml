@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="수록곡"
-            android:textColor="@color/black"
+            android:textColor="#0067a3"
             android:textSize="12sp" />
 
         <TextView
@@ -125,6 +125,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:text="상세정보"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
 
@@ -133,6 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
+            android:textColor="@color/black"
             android:text="영상"
             android:textSize="12sp" />
 
@@ -279,7 +281,7 @@
                     android:background="@drawable/textviewround"
                     android:text="TITLE"
                     android:textColor="@color/white"
-                    android:textSize="10sp"
+                    android:textSize="9sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/song_list_order_01_tv"
                     app:layout_constraintTop_toTopOf="@id/song_list_order_01_tv" />
@@ -425,7 +427,7 @@
                     android:background="@drawable/textviewround"
                     android:text="TITLE"
                     android:textColor="@color/white"
-                    android:textSize="10sp"
+                    android:textSize="9sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/song_list_order_03_tv"
                     app:layout_constraintTop_toTopOf="@id/song_list_order_03_tv" />
