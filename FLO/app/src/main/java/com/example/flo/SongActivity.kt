@@ -7,43 +7,43 @@ import com.example.flo.databinding.ActivitySongBinding
 
 class SongActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivitySongBinding
+    lateinit var binding: ActivitySongBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySongBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if(intent.hasExtra("title") && intent.hasExtra("singer")){
+        if (intent.hasExtra("title") && intent.hasExtra("singer")) {
             binding.songTitleTv.text = intent.getStringExtra("title")
             binding.songNameTv.text = intent.getStringExtra("singer")
         }
 
-        binding.songDownIb.setOnClickListener{
+        binding.songDownIb.setOnClickListener {
             finish()
         }
 
-        binding.songMiniplayerIv.setOnClickListener{
+        binding.songMiniplayerIv.setOnClickListener {
             setPlayerStatus(false)
         }
 
-        binding.songPauseIv.setOnClickListener{
+        binding.songPauseIv.setOnClickListener {
             setPlayerStatus(true)
         }
 
-        binding.songRepeatInactiveOffIv.setOnClickListener{
+        binding.songRepeatInactiveOffIv.setOnClickListener {
             setRepeatStatus(1)
         }
 
-        binding.songRepeatInactiveOnIv.setOnClickListener{
+        binding.songRepeatInactiveOnIv.setOnClickListener {
             setRepeatStatus(2)
         }
 
-        binding.songRepeatInactiveOn1Iv.setOnClickListener{
+        binding.songRepeatInactiveOn1Iv.setOnClickListener {
             setRepeatStatus(3)
         }
 
-        binding.songRepeatPlaylistIv.setOnClickListener{
+        binding.songRepeatPlaylistIv.setOnClickListener {
             setRepeatStatus(4)
         }
 
@@ -56,21 +56,20 @@ class SongActivity : AppCompatActivity() {
         }
 
 
-
     }
 
-    fun setPlayerStatus(isPlaying : Boolean){
-        if(isPlaying){
+    private fun setPlayerStatus(isPlaying: Boolean) {
+        if (isPlaying) {
             binding.songMiniplayerIv.visibility = View.VISIBLE
             binding.songPauseIv.visibility = View.GONE
-        }else{
+        } else {
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }
     }
 
-    fun setRepeatStatus(repeatWhat : Int){
-        when(repeatWhat){
+    private fun setRepeatStatus(repeatWhat: Int) {
+        when (repeatWhat) {
             1 -> {
                 binding.songRepeatInactiveOffIv.visibility = View.GONE
                 binding.songRepeatInactiveOnIv.visibility = View.VISIBLE
@@ -101,11 +100,11 @@ class SongActivity : AppCompatActivity() {
 
     }
 
-    fun setRandomStatus(isPlaying : Boolean){
-        if(isPlaying){
+    private fun setRandomStatus(isPlaying: Boolean) {
+        if (isPlaying) {
             binding.songRandomOffIb.visibility = View.VISIBLE
             binding.songRandomOnIb.visibility = View.GONE
-        }else{
+        } else {
             binding.songRandomOffIb.visibility = View.GONE
             binding.songRandomOnIb.visibility = View.VISIBLE
         }
