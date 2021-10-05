@@ -165,31 +165,86 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb" />
 
+    <LinearLayout
+        android:id="@+id/song_repeat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/song_player_related_ib"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb">
 
 
-    <ImageButton
-        android:id="@+id/song_repeat_inactive_ib"
+    <ImageView
+        android:id="@+id/song_repeat_inactive_off_iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="30dp"
         android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@drawable/nugu_btn_repeat_inactive"
-        app:layout_constraintEnd_toStartOf="@id/song_player_layout"
-        app:layout_constraintTop_toTopOf="@id/song_player_layout"
-        app:layout_constraintBottom_toBottomOf="@id/song_player_layout"/>
+        android:layout_marginEnd="30dp"/>
 
-    <ImageButton
-        android:id="@+id/song_random_inactive_ib"
+    <ImageView
+        android:id="@+id/song_repeat_inactive_on_iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="30dp"
         android:background="@color/white"
         android:scaleType="fitXY"
-        android:src="@drawable/nugu_btn_random_inactive"
-        app:layout_constraintStart_toEndOf="@id/song_player_layout"
-        app:layout_constraintTop_toTopOf="@id/song_player_layout"
-        app:layout_constraintBottom_toBottomOf="@id/song_player_layout" />
+        android:visibility="gone"
+        android:src="@drawable/btn_player_repeat_on_light"/>
+
+    <ImageView
+        android:id="@+id/song_repeat_inactive_on1_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/btn_player_repeat_on1_light"/>
+
+        <ImageView
+            android:id="@+id/song_repeat_playlist_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/btn_playlist_repeat_playlist"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/song_random_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/song_player_related_ib"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb">
+
+        <ImageView
+            android:id="@+id/song_random_off_ib"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/nugu_btn_random_inactive"/>
+
+        <ImageView
+            android:id="@+id/song_random_on_ib"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/btn_player_random_on_light"/>
+
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/song_player_layout"
