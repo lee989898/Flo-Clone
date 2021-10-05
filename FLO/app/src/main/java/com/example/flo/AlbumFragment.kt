@@ -46,6 +46,22 @@ class AlbumFragment : Fragment() {
             Toast.makeText(activity, "Celebrity", Toast.LENGTH_SHORT).show()
         }
 
+        binding.albumRecycleLayout.setOnClickListener{
+            Toast.makeText(activity, "돌림노래 (Feat. Dean)", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumEmptycupLayout.setOnClickListener{
+            Toast.makeText(activity, "빈 컵 (Empty Cup)", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumKidandoceanLayout.setOnClickListener{
+            Toast.makeText(activity, "아이와 나의 바다", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumAhpuhLayout.setOnClickListener{
+            Toast.makeText(activity, "어푸 (Ah puh)", Toast.LENGTH_SHORT).show()
+        }
+
 
         binding.albumToggleOffIv.setOnClickListener {
             toggleStatus(true)
