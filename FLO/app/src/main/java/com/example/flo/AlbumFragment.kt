@@ -30,6 +30,23 @@ class AlbumFragment : Fragment() {
             Toast.makeText(activity, "라일락", Toast.LENGTH_SHORT).show()
         }
 
+        binding.albumFluLayout.setOnClickListener{
+            Toast.makeText(activity, "Flu", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumCoinLayout.setOnClickListener{
+            Toast.makeText(activity, "Coin", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumSpringHelloLayout.setOnClickListener{
+            Toast.makeText(activity, "봄 안녕", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.albumCelebrityLayout.setOnClickListener{
+            Toast.makeText(activity, "Celebrity", Toast.LENGTH_SHORT).show()
+        }
+
+
         binding.albumToggleOffIv.setOnClickListener {
             toggleStatus(true)
         }
