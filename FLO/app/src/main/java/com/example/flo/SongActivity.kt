@@ -31,6 +31,22 @@ class SongActivity : AppCompatActivity() {
             setPlayerStatus(true)
         }
 
+        binding.songRepeatInactiveOffIv.setOnClickListener{
+            setRepeatStatus(1)
+        }
+
+        binding.songRepeatInactiveOnIv.setOnClickListener{
+            setRepeatStatus(2)
+        }
+
+        binding.songRepeatInactiveOn1Iv.setOnClickListener{
+            setRepeatStatus(3)
+        }
+
+        binding.songRepeatPlaylistIv.setOnClickListener{
+            setRepeatStatus(4)
+        }
+
 
 
     }
@@ -43,6 +59,38 @@ class SongActivity : AppCompatActivity() {
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }
+    }
+
+    fun setRepeatStatus(repeatWhat : Int){
+        when(repeatWhat){
+            1 -> {
+                binding.songRepeatInactiveOffIv.visibility = View.GONE
+                binding.songRepeatInactiveOnIv.visibility = View.VISIBLE
+                binding.songRepeatInactiveOn1Iv.visibility = View.GONE
+                binding.songRepeatPlaylistIv.visibility = View.GONE
+            }
+            2 -> {
+                binding.songRepeatInactiveOffIv.visibility = View.GONE
+                binding.songRepeatInactiveOnIv.visibility = View.GONE
+                binding.songRepeatInactiveOn1Iv.visibility = View.VISIBLE
+                binding.songRepeatPlaylistIv.visibility = View.GONE
+            }
+            3 -> {
+                binding.songRepeatInactiveOffIv.visibility = View.GONE
+                binding.songRepeatInactiveOnIv.visibility = View.GONE
+                binding.songRepeatInactiveOn1Iv.visibility = View.GONE
+                binding.songRepeatPlaylistIv.visibility = View.VISIBLE
+            }
+            else -> {
+                binding.songRepeatInactiveOffIv.visibility = View.VISIBLE
+                binding.songRepeatInactiveOnIv.visibility = View.GONE
+                binding.songRepeatInactiveOn1Iv.visibility = View.GONE
+                binding.songRepeatPlaylistIv.visibility = View.GONE
+            }
+
+
+        }
+
     }
 
 
