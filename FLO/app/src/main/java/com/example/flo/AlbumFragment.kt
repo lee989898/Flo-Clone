@@ -30,9 +30,31 @@ class AlbumFragment : Fragment() {
             Toast.makeText(activity, "라일락", Toast.LENGTH_SHORT).show()
         }
 
+        binding.albumToggleOffIv.setOnClickListener {
+            toggleStatus(true)
+        }
+
+        binding.albumToggleOnIv.setOnClickListener {
+            toggleStatus(false)
+        }
+
 
 
         return binding.root
     }
+
+    private fun toggleStatus(isSelected : Boolean){
+        if(isSelected){
+            binding.albumToggleOffIv.visibility = View.GONE
+            binding.albumToggleOnIv.visibility = View.VISIBLE
+        }
+        else{
+            binding.albumToggleOffIv.visibility = View.VISIBLE
+            binding.albumToggleOnIv.visibility = View.GONE
+
+        }
+
+    }
+
 
 }

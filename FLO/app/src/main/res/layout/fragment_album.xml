@@ -153,27 +153,43 @@
             android:layout_height="wrap_content">
 
 
+            <LinearLayout
+                android:id="@+id/song_favorite_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/album_select_layout"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+
+
             <TextView
                 android:id="@+id/album_my_favorite_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:text="내 취향 MIX"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/album_toggle_off_iv"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                />
 
             <ImageView
                 android:id="@+id/album_toggle_off_iv"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/btn_toggle_off"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/album_my_favorite_tv"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:src="@drawable/btn_toggle_off" />
+
+            <ImageView
+                android:id="@+id/album_toggle_on_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:src="@drawable/btn_toggle_on"
+                />
+
+            </LinearLayout>
 
 
             <ImageView
@@ -184,7 +200,7 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/btn_playlist_select_off"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/album_my_favorite_tv" />
+                app:layout_constraintTop_toBottomOf="@id/song_favorite_layout" />
 
             <TextView
                 android:id="@+id/album_all_select_text_tv"
@@ -205,7 +221,7 @@
                 android:layout_marginEnd="5dp"
                 android:src="@drawable/icon_browse_arrow_right"
                 app:layout_constraintEnd_toStartOf="@id/album_browse_arrow_text_tv"
-                app:layout_constraintTop_toBottomOf="@id/album_my_favorite_tv" />
+                app:layout_constraintTop_toBottomOf="@id/song_favorite_layout" />
 
             <TextView
                 android:id="@+id/album_browse_arrow_text_tv"
