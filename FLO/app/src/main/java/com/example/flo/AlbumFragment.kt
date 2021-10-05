@@ -1,5 +1,6 @@
 package com.example.flo
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,8 @@ class AlbumFragment : Fragment() {
 
 
         binding.albumAlbumImgIv.clipToOutline = true
+
+
 
         binding.albumArrowBlackIb.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()

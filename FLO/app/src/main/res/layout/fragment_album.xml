@@ -275,10 +275,10 @@
                     android:id="@+id/song_title_01_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/textviewround"
                     android:text="TITLE"
-                    android:background="@drawable/round"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/song_list_order_01_tv"
@@ -418,13 +418,13 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/song_title_03_tv"
+                    android:id="@+id/song_title_02_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:background="@drawable/round"
+                    android:background="@drawable/textviewround"
                     android:text="TITLE"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/song_list_order_03_tv"
@@ -439,7 +439,7 @@
                     android:textColor="@color/black"
                     android:textSize="10sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/song_title_03_tv"
+                    app:layout_constraintStart_toEndOf="@+id/song_title_02_tv"
                     app:layout_constraintTop_toTopOf="@id/song_list_order_03_tv" />
 
                 <TextView
@@ -450,8 +450,8 @@
                     android:text="아이유 (IU)"
                     android:textSize="10sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/song_title_03_tv"
-                    app:layout_constraintTop_toBottomOf="@id/song_title_03_tv" />
+                    app:layout_constraintStart_toStartOf="@+id/song_title_02_tv"
+                    app:layout_constraintTop_toBottomOf="@id/song_title_02_tv" />
 
                 <ImageView
                     android:id="@+id/song_btn_more_03_iv"
