@@ -47,6 +47,14 @@ class SongActivity : AppCompatActivity() {
             setRepeatStatus(4)
         }
 
+        binding.songRandomOffIb.setOnClickListener {
+            setRandomStatus(false)
+        }
+
+        binding.songRandomOnIb.setOnClickListener {
+            setRandomStatus(true)
+        }
+
 
 
     }
@@ -91,6 +99,16 @@ class SongActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    fun setRandomStatus(isPlaying : Boolean){
+        if(isPlaying){
+            binding.songRandomOffIb.visibility = View.VISIBLE
+            binding.songRandomOnIb.visibility = View.GONE
+        }else{
+            binding.songRandomOffIb.visibility = View.GONE
+            binding.songRandomOnIb.visibility = View.VISIBLE
+        }
     }
 
 
