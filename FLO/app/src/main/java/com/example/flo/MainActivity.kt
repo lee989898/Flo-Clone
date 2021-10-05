@@ -17,13 +17,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val song = Song(binding.mainMiniPlayerTitleTv.text.toString(), binding.mainMiniplayerTitletv.text.toString() )
+        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString())
 
-        Log.d(tag"Log test", song.title + song.title)
+        //Log.d( tag: "Log test", song.title + song.singer)
 
+        initNavigation()
 
         binding.mainPlayerLayout.setOnClickListener {
-           startActivity(Intent(this,SongActivity::class.java))
+           //startActivity(Intent(this,SongActivity::class.java))
 
             val intent = Intent(this, SongActivity::class.java)
             intent.putExtra("title", song.title)
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        initNavigation()
+
 
         binding.mainBnv.setOnItemSelectedListener {
             when (it.itemId) {

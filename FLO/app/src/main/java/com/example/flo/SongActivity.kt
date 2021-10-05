@@ -15,8 +15,8 @@ class SongActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         if(intent.hasExtra("title") && intent.hasExtra("singer")){
-            binding.songMusicTitleTv.text = intent.getStringExtra("title")
-            binding.songsingenrnametv.text = intent.getStringExtra("singer")
+            binding.songTitleTv.text = intent.getStringExtra("title")
+            binding.songNameTv.text = intent.getStringExtra("singer")
         }
 
         binding.songDownIb.setOnClickListener{
