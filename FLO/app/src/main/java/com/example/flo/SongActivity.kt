@@ -19,6 +19,8 @@ class SongActivity : AppCompatActivity() {
             binding.songNameTv.text = intent.getStringExtra("singer")
         }
 
+        binding.songAlbumExp2Iv.clipToOutline = true
+
         binding.songDownIb.setOnClickListener {
             finish()
         }

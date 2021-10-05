@@ -20,6 +20,9 @@ class AlbumFragment : Fragment() {
 
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
+
+        binding.albumAlbumImgIv.clipToOutline = true
+
         binding.albumArrowBlackIb.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
