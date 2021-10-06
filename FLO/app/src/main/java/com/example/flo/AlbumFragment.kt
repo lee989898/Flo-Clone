@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentAlbumBinding
 
@@ -78,6 +79,7 @@ class AlbumFragment : Fragment() {
             toggleStatus(false)
         }
 
+        /*
         binding.albumSongListTv.setOnClickListener {
             informationStatus(1)
         }
@@ -90,7 +92,7 @@ class AlbumFragment : Fragment() {
         binding.albumSongMvTv.setOnClickListener {
             informationStatus(3)
         }
-
+        */
 
 
 
@@ -110,7 +112,7 @@ class AlbumFragment : Fragment() {
 
     }
 
-    private fun informationStatus(whichInformation : Int){
+   /* private fun informationStatus(whichInformation : Int){
 
         when(whichInformation){
             1 -> {
@@ -133,6 +135,6 @@ class AlbumFragment : Fragment() {
 
 
     }
-
+*/
 
 }

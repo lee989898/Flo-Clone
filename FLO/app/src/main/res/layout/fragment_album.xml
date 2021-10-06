@@ -99,56 +99,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/album_album_explanation_tv" />
 
-    <LinearLayout
-        android:id="@+id/album_information_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/album_tab_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/album_album_img_iv">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_album_img_iv"
+        android:layout_width="match_parent"
+        app:tabIndicatorFullWidth="false"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/album_song_list_tv"
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:text="수록곡"
-            android:textColor="#0067a3"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/album_song_detail_tv"
+            android:text="수록곡"/>
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:text="상세정보"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
-
-
-        <TextView
-            android:id="@+id/album_song_mv_tv"
+            android:text="상세정보"/>
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:text="영상"
-            android:textSize="12sp" />
+            android:text="영상"/>
 
-    </LinearLayout>
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
 
     <LinearLayout
         android:id="@+id/album_music_option_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/album_information_layout">
+        app:layout_constraintTop_toBottomOf="@id/album_tab_layout">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -243,7 +230,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="470dp"
         android:overScrollMode="never"
         android:fillViewport="true"
         >
