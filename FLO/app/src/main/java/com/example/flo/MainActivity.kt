@@ -1,13 +1,16 @@
 package com.example.flo
 
+
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity() {
+
+
 
     lateinit var binding: ActivityMainBinding
 
@@ -34,6 +37,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.mainMiniplayerBtn.setOnClickListener {
+            setMiniPlayerStatus(false)
+            
+        }
+
+        binding.mainPauseBtn.setOnClickListener {
+            setMiniPlayerStatus(true)
+        }
 
 
         binding.mainBnv.setOnItemSelectedListener {
@@ -70,6 +81,16 @@ class MainActivity : AppCompatActivity() {
             false
         }
 
+    }
+
+    private fun setMiniPlayerStatus(isPlaying: Boolean) {
+        if (isPlaying) {
+            binding.mainMiniplayerBtn.visibility = View.VISIBLE
+            binding.mainPauseBtn.visibility = View.GONE
+        } else {
+            binding.mainMiniplayerBtn.visibility = View.GONE
+            binding.mainPauseBtn.visibility = View.VISIBLE
+        }
     }
 
     private fun initNavigation() {

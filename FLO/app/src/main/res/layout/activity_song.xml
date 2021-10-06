@@ -264,13 +264,13 @@
         android:layout_marginEnd="10dp"
         android:src="@drawable/btn_miniplayer_previous"/>
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/song_miniplayer_iv"
-        android:src="@drawable/btn_miniplayer_play"/>
+        <ImageView
+            android:id="@+id/song_miniplayer_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_miniplayer_play" />
 
-    <ImageView
+        <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/song_pause_iv"
