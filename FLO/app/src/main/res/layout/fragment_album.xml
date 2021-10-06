@@ -91,9 +91,9 @@
     <ImageView
         android:id="@+id/album_album_img_iv"
         android:layout_width="150dp"
-        android:background="@drawable/round"
         android:layout_height="150dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/round"
         android:src="@drawable/img_album_exp2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,37 +101,37 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/album_tab_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/album_album_img_iv"
         android:layout_width="match_parent"
-        app:tabIndicatorFullWidth="false"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_album_img_iv"
+        app:tabIndicatorFullWidth="false">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="수록곡"/>
+            android:text="수록곡" />
+
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="상세정보"/>
+            android:text="상세정보" />
+
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="영상"/>
+            android:text="영상" />
 
 
     </com.google.android.material.tabs.TabLayout>
-
-
 
 
     <LinearLayout
         android:id="@+id/album_music_option_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,14 +226,12 @@
     </LinearLayout>
 
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="470dp"
-        android:overScrollMode="never"
+        android:layout_marginTop="440dp"
         android:fillViewport="true"
-        >
+        android:overScrollMode="never">
 
         <LinearLayout
             android:id="@+id/album_music_list_layout"
@@ -873,7 +871,6 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
