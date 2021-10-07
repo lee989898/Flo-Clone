@@ -18,6 +18,16 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        binding.homeTodayAlbum01Iv.clipToOutline = true
+        binding.homeTodayAlbum02Iv.clipToOutline = true
+        binding.homeTodayAlbum03Iv.clipToOutline = true
+        binding.homePotcast01Iv.clipToOutline = true
+        binding.homePotcast02Iv.clipToOutline = true
+        binding.homePotcast03Iv.clipToOutline = true
+        binding.homeVideo01Iv.clipToOutline = true
+        binding.homeVideo02Iv.clipToOutline = true
+        binding.homeViewpagerExp2Iv.clipToOutline = true
+
         binding.homeTodayAlbum01Iv.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, AlbumFragment())
