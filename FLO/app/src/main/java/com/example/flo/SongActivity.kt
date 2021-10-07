@@ -1,6 +1,7 @@
 package com.example.flo
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -23,16 +24,25 @@ class SongActivity : AppCompatActivity() {
 
 
 
-
-
         if (intent.hasExtra("title") && intent.hasExtra("singer")) {
             binding.songTitleTv.text = intent.getStringExtra("title")
             binding.songNameTv.text = intent.getStringExtra("singer")
+
+            var firstNum = intent.getIntExtra("isplay", 0)
+
+            if(firstNum == 1){
+                setPlayerStatus(false)
+            }else if(firstNum == 2){
+                setPlayerStatus(true)
+            }
         }
 
-        binding.songAlbumExp2Iv.clipToOutline = true
+       binding.songAlbumExp2Iv.clipToOutline = true
 
         binding.songDownIb.setOnClickListener {
+
+
+
             finish()
         }
 
@@ -71,11 +81,11 @@ class SongActivity : AppCompatActivity() {
 
     }
 
-    public fun setPlayerStatus(isPlaying: Boolean) {
+    private fun setPlayerStatus(isPlaying: Boolean) {
         if (isPlaying) {
             binding.songMiniplayerIv.visibility = View.VISIBLE
             binding.songPauseIv.visibility = View.GONE
-        } else {
+        } else if(!(isPlaying)){
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }

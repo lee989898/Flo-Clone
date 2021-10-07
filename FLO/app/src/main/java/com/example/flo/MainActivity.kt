@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString())
+        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString(), 0)
 
         //Log.d( tag: "Log test", song.title + song.singer)
 
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SongActivity::class.java)
             intent.putExtra("title", song.title)
             intent.putExtra("singer", song.singer)
+            intent.putExtra("isplay", song.isplay)
 
 
             startActivity(intent)
@@ -39,11 +40,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainMiniplayerBtn.setOnClickListener {
             setMiniPlayerStatus(false)
-            
+            song.isplay = 1
         }
 
         binding.mainPauseBtn.setOnClickListener {
             setMiniPlayerStatus(true)
+            song.isplay = 2
+
         }
 
 
