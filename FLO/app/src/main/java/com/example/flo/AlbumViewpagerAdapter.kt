@@ -9,11 +9,7 @@ class AlbumViewpagerAdapter(fragmet: Fragment) : FragmentStateAdapter(fragmet) {
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
-        return when(position){
-            0 ->
-            1 ->
-            else ->
-        }
+        TODO()
     }
 
 
