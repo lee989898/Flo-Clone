@@ -3,66 +3,135 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:overScrollMode="never"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <TextView
-        android:id="@+id/look_see_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="둘러보기"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-        <Button
-            android:id="@+id/look_chart_bt"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:id="@+id/look_see_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            app:layout_constraintTop_toBottomOf="@id/look_see_tv"
+            android:layout_marginTop="20dp"
+            android:text="둘러보기"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="차트"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/look_horizontal_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/look_see_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/look_chart_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="차트"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/look_mv_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="영상"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/look_chart_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/look_genre_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="장르"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/look_mv_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/look_status_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="상황"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/look_genre_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/look_mood_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="분위기"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/look_status_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/look_audio_bt"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/look_btn_round"
+                    android:text="오디오"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/look_mood_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/look_chart_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="차트"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="차트"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/look_chart_bt"/>
+            app:layout_constraintTop_toBottomOf="@id/look_horizontal_sv" />
 
-        
-
-
-
-
-
-
+        <ImageView
+            android:id="@+id/look_arrow_more_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/btn_arrow_more"
+            app:layout_constraintBottom_toBottomOf="@id/look_chart_tv"
+            app:layout_constraintStart_toEndOf="@id/look_chart_tv"
+            app:layout_constraintTop_toTopOf="@id/look_chart_tv" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
 
 
 </ScrollView>
