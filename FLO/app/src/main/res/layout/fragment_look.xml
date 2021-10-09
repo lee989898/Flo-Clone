@@ -543,6 +543,46 @@
             app:layout_constraintStart_toEndOf="@id/look_video_tv"
             app:layout_constraintTop_toTopOf="@id/look_video_tv" />
 
+        <ImageView
+            android:id="@+id/look_video_exp_iv"
+            android:layout_marginTop="20dp"
+            android:layout_width="360dp"
+            android:scaleType="fitXY"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_height="190dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/look_video_tv"
+            android:src="@drawable/img_video_exp"/>
+
+        <TextView
+            android:id="@+id/look_video_title_tv"
+            android:text="제목"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/look_video_exp_iv"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/look_video_singer_tv"
+            android:text="가수"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/look_video_title_tv"
+            android:layout_marginTop="5dp"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
