@@ -10,10 +10,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentAlbumBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class AlbumFragment : Fragment() {
 
     lateinit var binding: FragmentAlbumBinding
+    
+    val information = arrayListOf("수록곡", "상세정보", "영상")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -83,6 +86,10 @@ class AlbumFragment : Fragment() {
 
         val albumAdapter = AlbumViewpagerAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
+        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){
+            tab, postion ->
+            tab.text = information[postion]
+        }.attach()
 
 
         return binding.root

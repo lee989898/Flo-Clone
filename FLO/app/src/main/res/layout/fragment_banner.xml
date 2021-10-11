@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/banner_imager_iv"
+        android:id="@+id/banner_image_iv"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:scaleType="fitXY"

@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         binding.homeAlbumExp01Iv.clipToOutline = true
         binding.homeAlbumExp02Iv.clipToOutline = true
 
-        binding.homeTodayAlbum01Iv.setOnClickListener{
+        binding.homeTodayAlbum01Iv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, AlbumFragment())
                 .commitAllowingStateLoss()
@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
 
-        binding.homeBannerVp.adapter =  bannerAdapter
+        binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         return binding.root
