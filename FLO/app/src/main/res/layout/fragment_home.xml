@@ -21,25 +21,21 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
-
         <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
             android:id="@+id/home_spring_dots_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:dampingRatio="0.5"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            app:dampingRatio="0.5"
             app:dotsCornerRadius="20dp"
             app:dotsSize="10dp"
             app:dotsSpacing="6dp"
             app:dotsStrokeWidth="1dp"
-            app:stiffness="300"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/panel_content_vp"
-            android:layout_gravity="center"
-            />
+            app:stiffness="300" />
 
         <TextView
             android:id="@+id/home_today_album_text_tv"
