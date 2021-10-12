@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
-    val information = arrayListOf("안녕", "안녕")
+    val information = arrayListOf("","","","","")
 
 
     override fun onCreateView(
@@ -22,6 +22,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+
 
         binding.homeTodayAlbum01Iv.clipToOutline = true
         binding.homeTodayAlbum02Iv.clipToOutline = true

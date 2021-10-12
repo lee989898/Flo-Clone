@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:overScrollMode="never"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,177 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/panel_content_tb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorColor="#3f3fff"
-        app:tabSelectedTextColor="#3f3fff"
-        app:tabRippleColor="#00ff0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorFullWidth="false" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/panel_content_vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
 
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/panel_content_vp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
-
-        <!--        <ImageView-->
-<!--            android:id="@+id/home_background_iv"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="430dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/img_default_4_x_1"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/home_btn_setting_iv"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginEnd="20dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/btn_main_setting"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/home_btn_ticket_iv"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginEnd="20dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/btn_main_ticket"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/home_btn_setting_iv"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/home_btn_nugu_iv"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginEnd="20dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/btn_nugu"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/home_btn_ticket_iv"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_title_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:text="포근하게 덮어주는 꿈의 \n목소리"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="23sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/home_btn_nugu_iv" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/home_btn_play_iv"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginEnd="30dp"-->
-<!--            android:src="@drawable/btn_panel_play_large"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/home_title_tv" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/home_album_exp_01_iv"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginBottom="30dp"-->
-<!--            android:background="@drawable/round"-->
-<!--            android:src="@drawable/img_album_exp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/home_background_iv"-->
-<!--            app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_album_exp_text_01_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:text="잠이 안온다"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="13sp"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/home_album_exp_text_02_tv"-->
-<!--            app:layout_constraintStart_toEndOf="@id/home_album_exp_01_iv"-->
-<!--            app:layout_constraintTop_toTopOf="@id/home_album_exp_01_iv" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_album_exp_text_02_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:text="젠(zen)"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/home_album_exp_01_iv"-->
-<!--            app:layout_constraintStart_toEndOf="@id/home_album_exp_01_iv"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/home_album_exp_text_01_tv" />-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/panel_content_tb"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/panel_content_vp"
+            app:tabIndicator="@drawable/tab_selector"
+            app:tabIndicatorColor="#3f3fff"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="#00ff0000"
+            app:tabSelectedTextColor="#3f3fff" />
 
 
-<!--        <ImageView-->
-<!--            android:id="@+id/home_album_exp_02_iv"-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:background="@drawable/round"-->
-<!--            android:src="@drawable/img_album_exp"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/home_album_exp_01_iv"-->
-<!--            app:layout_constraintStart_toStartOf="parent" />-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_album_exp_text_03_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:text="잠이 안온다"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="13sp"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/home_album_exp_text_04_tv"-->
-<!--            app:layout_constraintStart_toEndOf="@id/home_album_exp_02_iv"-->
-<!--            app:layout_constraintTop_toTopOf="@id/home_album_exp_02_iv" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_album_exp_text_04_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:text="젠(zen)"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/home_album_exp_02_iv"-->
-<!--            app:layout_constraintStart_toEndOf="@id/home_album_exp_02_iv"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/home_album_exp_text_03_tv" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/home_album_data_tv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:text="총 15곡 2019.11.11"-->
-<!--            android:textColor="#ffffff"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/home_album_exp_02_iv"-->
-<!--            app:layout_constraintStart_toStartOf="parent" />-->
 
         <TextView
             android:id="@+id/home_today_album_text_tv"
@@ -195,14 +48,14 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb"/>
+            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
 
         <ImageView
             android:id="@+id/home_today_btn_more_iv"
             android:layout_width="30dp"
             android:layout_height="27dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/btn_arrow_more"
             app:layout_constraintStart_toEndOf="@id/home_today_album_text_tv"
             app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
@@ -308,8 +161,8 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_marginStart="170dp"
-                            android:scaleType="centerCrop"
                             android:background="@drawable/round"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/img_album_exp2" />
 
 
@@ -341,8 +194,8 @@
                             android:id="@+id/home_today_album_03_iv"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:background="@drawable/round"
                             android:layout_marginStart="340dp"
+                            android:background="@drawable/round"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_album_exp2" />
 
@@ -375,16 +228,16 @@
         </HorizontalScrollView>
 
 
-<!--        <ImageView-->
-<!--            android:id="@+id/home_viewpager_iv"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:background="@drawable/round"-->
-<!--            android:scaleType="fitXY"-->
-<!--            android:src="@drawable/img_home_viewpager_exp"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/home_viewpager_iv"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:background="@drawable/round"-->
+        <!--            android:scaleType="fitXY"-->
+        <!--            android:src="@drawable/img_home_viewpager_exp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />-->
 
 
         <androidx.viewpager2.widget.ViewPager2
@@ -392,10 +245,9 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_horScrollView"/>
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />
 
 
         <TextView
@@ -439,8 +291,8 @@
                         <ImageView
                             android:id="@+id/home_potcast_01_iv"
                             android:layout_width="150dp"
-                            android:background="@drawable/round"
                             android:layout_height="150dp"
+                            android:background="@drawable/round"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_potcast_exp" />
 
@@ -504,9 +356,9 @@
                         <ImageView
                             android:id="@+id/home_potcast_03_iv"
                             android:layout_width="150dp"
-                            android:background="@drawable/round"
                             android:layout_height="150dp"
                             android:layout_marginStart="340dp"
+                            android:background="@drawable/round"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_potcast_exp" />
 
@@ -579,8 +431,8 @@
                         <ImageView
                             android:id="@+id/home_video_01_iv"
                             android:layout_width="300dp"
-                            android:background="@drawable/round"
                             android:layout_height="150dp"
+                            android:background="@drawable/round"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_video_exp" />
 
@@ -611,8 +463,8 @@
                             android:id="@+id/home_video_02_iv"
                             android:layout_width="300dp"
                             android:layout_height="150dp"
-                            android:background="@drawable/round"
                             android:layout_marginStart="320dp"
+                            android:background="@drawable/round"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img_video_exp" />
 
@@ -662,8 +514,8 @@
             android:layout_width="370dp"
             android:layout_height="120dp"
             android:layout_marginTop="20dp"
-            android:scaleType="centerCrop"
             android:background="@drawable/round"
+            android:scaleType="centerCrop"
             android:src="@drawable/img_home_viewpager_exp2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
