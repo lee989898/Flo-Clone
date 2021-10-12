@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/home_background_iv"
@@ -75,7 +75,6 @@
         android:layout_height="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/round"
         android:src="@drawable/img_album_exp"
         app:layout_constraintBottom_toBottomOf="@id/home_background_iv"
         app:layout_constraintStart_toStartOf="parent" />
@@ -112,7 +111,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round"
-        android:src="@drawable/img_album_exp"
+        android:src="@drawable/park"
         app:layout_constraintBottom_toTopOf="@id/home_album_exp_01_iv"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -122,7 +121,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="잠이 안온다"
+        android:text="All I Wanna Do"
         android:textColor="#ffffff"
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@id/home_album_exp_text_04_tv"
@@ -134,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="젠(zen)"
+        android:text="박재범"
         android:textColor="#ffffff"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/home_album_exp_02_iv"
