@@ -44,8 +44,8 @@ class AlbumFragment : Fragment() {
         val albumAdapter = AlbumViewpagerAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){
-            tab, postion ->
-            tab.text = information[postion]
+            tab, position ->
+            tab.text = information[position]
         }.attach()
 
 

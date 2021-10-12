@@ -7,10 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.flo.databinding.FragmentHomeBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
+
+    val information = arrayListOf("안녕", "안녕")
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,8 +32,8 @@ class HomeFragment : Fragment() {
         binding.homeVideo01Iv.clipToOutline = true
         binding.homeVideo02Iv.clipToOutline = true
         binding.homeViewpagerExp2Iv.clipToOutline = true
-        binding.homeAlbumExp01Iv.clipToOutline = true
-        binding.homeAlbumExp02Iv.clipToOutline = true
+//        binding.homeAlbumExp01Iv.clipToOutline = true
+//        binding.homeAlbumExp02Iv.clipToOutline = true
 
         binding.homeTodayAlbum01Iv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
@@ -43,6 +47,13 @@ class HomeFragment : Fragment() {
 
         binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val panelAdapter = HomeViewpagerAdapter(this)
+        binding.panelContentVp.adapter = panelAdapter
+        TabLayoutMediator(binding.panelContentTb, binding.panelContentVp){
+            tab, position ->
+            tab.text = information[position]
+        }.attach()
 
         return binding.root
     }
