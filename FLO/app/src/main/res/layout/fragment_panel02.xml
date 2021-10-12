@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/home_background_iv"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_album_exp2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_btn_setting_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn_main_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_btn_ticket_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn_main_ticket"
+        app:layout_constraintEnd_toStartOf="@id/home_btn_setting_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_btn_nugu_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn_nugu"
+        app:layout_constraintEnd_toStartOf="@id/home_btn_ticket_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="한밤의 북악 스카이웨이 \n드라이브 감성 뮤직"
+        android:textColor="#ffffff"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_btn_nugu_iv" />
+
+    <ImageView
+        android:id="@+id/home_btn_play_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/btn_panel_play_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_title_tv" />
+
+    <ImageView
+        android:id="@+id/home_album_exp_01_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round"
+        android:src="@drawable/img_album_exp"
+        app:layout_constraintBottom_toBottomOf="@id/home_background_iv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/home_album_exp_text_01_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="잠이 안온다"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/home_album_exp_text_02_tv"
+        app:layout_constraintStart_toEndOf="@id/home_album_exp_01_iv"
+        app:layout_constraintTop_toTopOf="@id/home_album_exp_01_iv" />
+
+    <TextView
+        android:id="@+id/home_album_exp_text_02_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="젠(zen)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/home_album_exp_01_iv"
+        app:layout_constraintStart_toEndOf="@id/home_album_exp_01_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_album_exp_text_01_tv" />
+
+
+    <ImageView
+        android:id="@+id/home_album_exp_02_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round"
+        android:src="@drawable/img_album_exp"
+        app:layout_constraintBottom_toTopOf="@id/home_album_exp_01_iv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/home_album_exp_text_03_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="잠이 안온다"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/home_album_exp_text_04_tv"
+        app:layout_constraintStart_toEndOf="@id/home_album_exp_02_iv"
+        app:layout_constraintTop_toTopOf="@id/home_album_exp_02_iv" />
+
+    <TextView
+        android:id="@+id/home_album_exp_text_04_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="젠(zen)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/home_album_exp_02_iv"
+        app:layout_constraintStart_toEndOf="@id/home_album_exp_02_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_album_exp_text_03_tv" />
+
+    <TextView
+        android:id="@+id/home_album_data_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="총 15곡 2020.02.11"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/home_album_exp_02_iv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

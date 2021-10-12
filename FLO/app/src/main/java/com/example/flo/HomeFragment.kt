@@ -65,10 +65,10 @@ class HomeFragment : Fragment() {
         override fun createFragment(position: Int): Fragment {
             return when(position){
                 0 -> PanelFragment()
-                1 -> PanelFragment()
-                2 -> PanelFragment()
-                3 -> PanelFragment()
-                else -> PanelFragment()
+                1 -> PanelFragment2()
+                2 -> PanelFragment3()
+                3 -> PanelFragment4()
+                else -> PanelFragment5()
             }
         }
     }
