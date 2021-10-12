@@ -11,7 +11,7 @@ class LockerViewpagerAdapter(fragment: Fragment): FragmentStateAdapter(fragment)
 
     override fun createFragment(position: Int): Fragment {
         return when(position){
-            1 -> StoreFragment()
+            0 -> StoreFragment()
             else -> SongFileFragment()
         }
     }
