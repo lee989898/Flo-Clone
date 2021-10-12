@@ -22,20 +22,24 @@
 
 
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/panel_content_tb"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
+
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/home_spring_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dampingRatio="0.5"
+            android:layout_marginTop="10dp"
+            app:dotsCornerRadius="20dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="6dp"
+            app:dotsStrokeWidth="1dp"
+            app:stiffness="300"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/panel_content_vp"
-            app:tabIndicator="@drawable/tab_selector"
-            app:tabIndicatorColor="#3f3fff"
-            app:tabIndicatorFullWidth="false"
-            app:tabRippleColor="#00ff0000"
-            app:tabSelectedTextColor="#3f3fff" />
-
-
+            android:layout_gravity="center"
+            />
 
         <TextView
             android:id="@+id/home_today_album_text_tv"
@@ -48,7 +52,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
+            app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
         <ImageView
             android:id="@+id/home_today_btn_more_iv"
@@ -58,7 +62,7 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/btn_arrow_more"
             app:layout_constraintStart_toEndOf="@id/home_today_album_text_tv"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
+            app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
         <TextView
             android:id="@+id/home_synthesis_tv"
@@ -71,7 +75,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/home_domestic_tv"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
+            app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
         <TextView
             android:id="@+id/home_domestic_tv"
@@ -83,7 +87,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/home_overseas_tv"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
+            app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
         <TextView
             android:id="@+id/home_overseas_tv"
@@ -95,7 +99,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/panel_content_tb" />
+            app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
 
         <HorizontalScrollView
@@ -111,6 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"

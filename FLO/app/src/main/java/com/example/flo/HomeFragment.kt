@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.flo.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -13,7 +14,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
-    val information = arrayListOf("","","","","")
 
 
     override fun onCreateView(
@@ -23,6 +23,11 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+
+        binding.panelContentVp.adapter = ScreenSlidePagerAdapter(this)
+        binding.panelContentVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.homeSpringDotsIndicator.setViewPager2(binding.panelContentVp)
 
 
         binding.homeTodayAlbum01Iv.clipToOutline = true
@@ -34,8 +39,6 @@ class HomeFragment : Fragment() {
         binding.homeVideo01Iv.clipToOutline = true
         binding.homeVideo02Iv.clipToOutline = true
         binding.homeViewpagerExp2Iv.clipToOutline = true
-//        binding.homeAlbumExp01Iv.clipToOutline = true
-//        binding.homeAlbumExp02Iv.clipToOutline = true
 
         binding.homeTodayAlbum01Iv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
@@ -50,14 +53,24 @@ class HomeFragment : Fragment() {
         binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        val panelAdapter = HomeViewpagerAdapter(this)
-        binding.panelContentVp.adapter = panelAdapter
-        TabLayoutMediator(binding.panelContentTb, binding.panelContentVp){
-            tab, position ->
-            tab.text = information[position]
-        }.attach()
+
 
         return binding.root
+    }
+
+    private inner class ScreenSlidePagerAdapter(fragment: HomeFragment) : FragmentStateAdapter(fragment){
+
+        override fun getItemCount(): Int = 5
+
+        override fun createFragment(position: Int): Fragment {
+            return when(position){
+                0 -> PanelFragment()
+                1 -> PanelFragment()
+                2 -> PanelFragment()
+                3 -> PanelFragment()
+                else -> PanelFragment()
+            }
+        }
     }
 
 
