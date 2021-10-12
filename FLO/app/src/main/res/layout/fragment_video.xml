@@ -1,17 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비디오 프래그먼트"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/video_lately_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:text="최신순"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/video_btn_down_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/nugu_btn_down"
+                app:layout_constraintBottom_toBottomOf="@id/video_lately_tv"
+                app:layout_constraintStart_toEndOf="@id/video_lately_tv"
+                app:layout_constraintTop_toTopOf="@id/video_lately_tv" />
+
+            <ImageView
+                android:id="@+id/video_video_01_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_video_exp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/video_lately_tv" />
+
+            <TextView
+                android:id="@+id/vidoe_video_title_01_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="25dp"
+                android:text="[MV] Coin"
+                app:layout_constraintStart_toStartOf="@id/video_video_01_iv"
+                app:layout_constraintTop_toBottomOf="@id/video_video_01_iv" />
+
+            <TextView
+                android:id="@+id/video_video_singer_01_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="25dp"
+                android:text="아이유 (IU) | 2021.03.26"
+                app:layout_constraintStart_toStartOf="@id/video_video_01_iv"
+                app:layout_constraintTop_toBottomOf="@id/vidoe_video_title_01_tv"
+
+                />
+
+            <ImageView
+                android:id="@+id/video_video_02_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_video_exp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/video_video_singer_01_tv" />
+
+            <TextView
+                android:id="@+id/vidoe_video_title_02_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="25dp"
+                android:text="[MV] 라일락 (LILAC)"
+                app:layout_constraintStart_toStartOf="@id/video_video_02_iv"
+                app:layout_constraintTop_toBottomOf="@id/video_video_02_iv" />
+
+            <TextView
+                android:id="@+id/video_video_singer_02_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="25dp"
+                android:text="아이유 (IU) | 2021.03.25"
+                app:layout_constraintStart_toStartOf="@id/video_video_02_iv"
+                app:layout_constraintTop_toBottomOf="@id/vidoe_video_title_02_tv"
+
+                />
+
+            <ImageView
+                android:id="@+id/video_video_03_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_video_exp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/video_video_singer_02_tv" />
+
+            <TextView
+                android:id="@+id/vidoe_video_title_03_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="25dp"
+                android:text="[티저] 라일락 (LILAC)"
+                app:layout_constraintStart_toStartOf="@id/video_video_03_iv"
+                app:layout_constraintTop_toBottomOf="@id/video_video_03_iv" />
+
+            <TextView
+                android:id="@+id/video_video_singer_03_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="25dp"
+                android:text="아이유 (IU) | 2021.03.24"
+                app:layout_constraintStart_toStartOf="@id/video_video_03_iv"
+                app:layout_constraintTop_toBottomOf="@id/vidoe_video_title_03_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

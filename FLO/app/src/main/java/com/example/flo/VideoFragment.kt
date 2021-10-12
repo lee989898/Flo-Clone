@@ -19,6 +19,9 @@ class VideoFragment : Fragment() {
     ): View? {
         binding = FragmentVideoBinding.inflate(inflater, container, false)
 
+
+        binding.videoVideo01Iv.clipToOutline = true
+
         return binding.root
     }
 }
