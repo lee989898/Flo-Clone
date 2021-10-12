@@ -22,7 +22,7 @@
             <LinearLayout
                 android:id="@+id/detail_information_layout"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -157,6 +157,22 @@
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/detail_album_explain_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="&apos;아이유(IU)&apos;정규 5집\n\n [LILAC]&quot;안녕 꽃잎 같은 안녕&quot;
+                        \n&quot;내 맘에 아무 의문이 없어 난 이 다음으로 가요&quot;\n\n
+20대의 마지막에 대해 화려한 &apos;인사&apos;를 예고했던 아이유가 봄 내음과\n 함께 다섯 번째 정규앨범 [LILAC]으로 돌아왔다. 4년 만에 선보이는\n 정규앨범 [LILAC]은 스무 살의 솔직하고 풋풋한 감성을 담아 발표했던\n 20대의 첫 앨범 [스무 살의 봄]과는 달리,\n 지금껏 지나온 20대를 10개의\n 트랙에 다채로운 시각으로 풀어내 그동안의 성숙해진 감성을 오롯이\n 담았다."
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/detail_album_information_tv"/>
+
 
 
 
