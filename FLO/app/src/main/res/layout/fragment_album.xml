@@ -104,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="#3f3fff"
-        app:tabTextColor="#3f3fff"
+        app:tabSelectedTextColor="#3f3fff"
         app:tabRippleColor="#00ff0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
