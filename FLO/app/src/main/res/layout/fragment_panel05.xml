@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="430dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_album_exp2"
+        android:src="@drawable/img_default_4_x_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:text="포근하게 덮어주는 꿈의 \n목소리"
+        android:text="소울 블루스에 취하는 밤"
         android:textColor="#ffffff"
         android:textSize="23sp"
         android:textStyle="bold"

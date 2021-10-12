@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="430dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_album_exp2"
+        android:src="@drawable/img_default_4_x_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
