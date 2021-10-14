@@ -22,7 +22,6 @@ class SongActivity : AppCompatActivity() {
 //    private val handler = Handler(Looper.getMainLooper())
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySongBinding.inflate(layoutInflater)
@@ -39,17 +38,16 @@ class SongActivity : AppCompatActivity() {
 
             var firstNum = intent.getIntExtra("isplay", 0)
 
-            if(firstNum == 1){
+            if (firstNum == 1) {
                 setPlayerStatus(false)
-            }else if(firstNum == 2){
+            } else if (firstNum == 2) {
                 setPlayerStatus(true)
             }
         }
 
-       binding.songAlbumExp2Iv.clipToOutline = true
+        binding.songAlbumExp2Iv.clipToOutline = true
 
         binding.songDownIb.setOnClickListener {
-
 
 
             finish()
@@ -96,7 +94,7 @@ class SongActivity : AppCompatActivity() {
         if (isPlaying) {
             binding.songMiniplayerIv.visibility = View.VISIBLE
             binding.songPauseIv.visibility = View.GONE
-        } else if(!(isPlaying)){
+        } else if (!(isPlaying)) {
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
         }
@@ -137,41 +135,40 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
-    inner class Player(private val playTime:Int, var isPlaying: Boolean) : Thread() {
+    inner class Player(private val playTime: Int, var isPlaying: Boolean) : Thread() {
         private var second = 0
 
         override fun run() {
 
             try {
 
+                while (true) {
+                    if (isPlaying) {
+                        sleep(1000)
+                        second++
+
+                        runOnUiThread {
+                            binding.songSeekbarSb.progress = second * 1000 / playTime
+                            binding.songStartTimeTv.text =
+                                String.format("%02:%02d", second / 60, second % 60)
+                        }
+
+                    }
+                }
+
+                if (second >= playTime) {
+                    break
+                }
             } catch (e: InterruptedException) {
                 Log.d("interrupt", "쓰레드가 종료되었습니다.")
             }
 
-            while (true) {
-                if (isPlaying) {
-                    sleep(1000)
-                    second++
-
-                    runOnUiThread {
-                        binding.songSeekbarSb.progress = second * 1000 / playTime
-                        binding.songStartTimeTv.text =
-                            String.format("%02:%02d", second / 60, second % 60)
-                    }
-
-                }
-            }
-
-            if (second >= playTime) {
-                break
-            }
-
         }
-    }
 
-    override fun onDestroy() {
-        player.interrupt()
-        super.onDestroy()
-    }
+        override fun onDestroy() {
+            player.interrupt()
+            super.onDestroy()
+        }
 
+    }
 }

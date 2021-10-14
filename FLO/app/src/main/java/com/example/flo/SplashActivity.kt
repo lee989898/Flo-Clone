@@ -18,11 +18,10 @@ class SplashActivity: AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             intent= Intent(this,MainActivity::class.java)
             startActivity(intent)
-        })
+        },2000)
 
         setContentView(binding.root)
     }
 
     }
 
-}
