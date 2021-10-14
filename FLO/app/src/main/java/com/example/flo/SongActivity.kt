@@ -3,6 +3,9 @@ package com.example.flo
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivitySongBinding
@@ -14,6 +17,9 @@ class SongActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySongBinding
 
+    private lateinit var player: Player
+
+//    private val handler = Handler(Looper.getMainLooper())
 
 
 
@@ -22,7 +28,10 @@ class SongActivity : AppCompatActivity() {
         binding = ActivitySongBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        var song = Song()
 
+        player = Player(song.playTime, song.isPlaying)
+        player.start()
 
         if (intent.hasExtra("title") && intent.hasExtra("singer")) {
             binding.songTitleTv.text = intent.getStringExtra("title")
@@ -47,10 +56,12 @@ class SongActivity : AppCompatActivity() {
         }
 
         binding.songMiniplayerIv.setOnClickListener {
+            player.isPlaying = true
             setPlayerStatus(false)
         }
 
         binding.songPauseIv.setOnClickListener {
+            player.isPlaying = false
             setPlayerStatus(true)
         }
 
@@ -126,5 +137,41 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
+    inner class Player(private val playTime:Int, var isPlaying: Boolean) : Thread() {
+        private var second = 0
+
+        override fun run() {
+
+            try {
+
+            } catch (e: InterruptedException) {
+                Log.d("interrupt", "쓰레드가 종료되었습니다.")
+            }
+
+            while (true) {
+                if (isPlaying) {
+                    sleep(1000)
+                    second++
+
+                    runOnUiThread {
+                        binding.songSeekbarSb.progress = second * 1000 / playTime
+                        binding.songStartTimeTv.text =
+                            String.format("%02:%02d", second / 60, second % 60)
+                    }
+
+                }
+            }
+
+            if (second >= playTime) {
+                break
+            }
+
+        }
+    }
+
+    override fun onDestroy() {
+        player.interrupt()
+        super.onDestroy()
+    }
 
 }

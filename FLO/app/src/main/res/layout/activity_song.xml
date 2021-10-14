@@ -139,8 +139,17 @@
     <SeekBar
         android:id="@+id/song_seekbar_sb"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:max="50"
+        android:layout_height="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:paddingEnd="0dp"
+        android:background="@null"
+        android:backgroundTint="@color/song_player"
+        android:paddingStart="0dp"
+        android:progress="500"
+        android:max="1000"
+        android:thumb="@color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_like_off_ib" />
@@ -157,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb" />
 
     <TextView
-        android:id="@+id/song_time_end_tv"
+        android:id="@+id/song_start_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
