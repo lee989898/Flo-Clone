@@ -205,7 +205,7 @@
         android:src="@drawable/btn_player_repeat_on_light"/>
 
     <ImageView
-        android:id="@+id/song_repeat_inactive_on1_iv"
+        android:id="@+id/song_repeat_inactive_on_one_iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@color/white"
