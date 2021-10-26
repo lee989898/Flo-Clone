@@ -10,21 +10,16 @@ import com.example.flo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-
-
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initNavigation()
 
         val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString(), 0)
 
-        //Log.d( tag: "Log test", song.title + song.singer)
-
-        initNavigation()
 
         binding.mainPlayerLayout.setOnClickListener {
            //startActivity(Intent(this,SongActivity::class.java))
