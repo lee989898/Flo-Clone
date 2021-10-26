@@ -18,30 +18,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initNavigation()
 
-        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString(), 0)
-
+       val song = Song("라일락", "아이유(IU)", 215,false)
+        //setMiniPlayer(song)
 
         binding.mainPlayerLayout.setOnClickListener {
-           //startActivity(Intent(this,SongActivity::class.java))
-
             val intent = Intent(this, SongActivity::class.java)
             intent.putExtra("title", song.title)
             intent.putExtra("singer", song.singer)
-            intent.putExtra("isplay", song.isplay)
-
-
+            intent.putExtra("playTime", song.playTime)
+            intent.putExtra("isPlaying", song.isPlaying)
             startActivity(intent)
         }
 
         binding.mainMiniplayerBtn.setOnClickListener {
             setMiniPlayerStatus(false)
-            song.isplay = 1
         }
 
         binding.mainPauseBtn.setOnClickListener {
             setMiniPlayerStatus(true)
-            song.isplay = 2
-
         }
 
 

@@ -10,46 +10,25 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivitySongBinding
 
-
-
 class SongActivity : AppCompatActivity() {
-
 
     lateinit var binding: ActivitySongBinding
 
+    private val song: Song = Song()
     private lateinit var player: Player
-
-//    private val handler = Handler(Looper.getMainLooper())
-
+    //private val handler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySongBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var song = Song()
+        initSong()
 
         player = Player(song.playTime, song.isPlaying)
         player.start()
 
-        if (intent.hasExtra("title") && intent.hasExtra("singer")) {
-            binding.songTitleTv.text = intent.getStringExtra("title")
-            binding.songNameTv.text = intent.getStringExtra("singer")
-
-            var firstNum = intent.getIntExtra("isplay", 0)
-
-            if (firstNum == 1) {
-                setPlayerStatus(false)
-            } else if (firstNum == 2) {
-                setPlayerStatus(true)
-            }
-        }
-
-        binding.songAlbumExp2Iv.clipToOutline = true
-
         binding.songDownIb.setOnClickListener {
-
-
             finish()
         }
 
@@ -71,7 +50,7 @@ class SongActivity : AppCompatActivity() {
             setRepeatStatus(2)
         }
 
-        binding.songRepeatInactiveOn1Iv.setOnClickListener {
+        binding.songRepeatInactiveOnOneIv.setOnClickListener {
             setRepeatStatus(3)
         }
 
@@ -87,7 +66,24 @@ class SongActivity : AppCompatActivity() {
             setRandomStatus(true)
         }
 
+        binding.songAlbumExp2Iv.clipToOutline = true
 
+    }
+
+    private fun initSong() {
+        if (intent.hasExtra("title") && intent.hasExtra("singer") && intent.hasExtra("playTime")
+            && intent.hasExtra("isPlaying")
+        ) {
+            song.title = intent.getStringExtra("title")!!
+            song.singer = intent.getStringExtra("signer")!!
+            song.playTime = intent.getIntExtra("playTime", 0)
+            song.isPlaying = intent.getBooleanExtra("isPlaying", false)
+
+            binding.songEndTimeTv.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
+            binding.songTitleTv.text = song.title
+            binding.songNameTv.text = song.singer
+            setPlayerStatus(song.isPlaying)
+        }
     }
 
     private fun setPlayerStatus(isPlaying: Boolean) {
@@ -109,20 +105,17 @@ class SongActivity : AppCompatActivity() {
             }
             2 -> {
                 binding.songRepeatInactiveOnIv.visibility = View.GONE
-                binding.songRepeatInactiveOn1Iv.visibility = View.VISIBLE
+                binding.songRepeatInactiveOnOneIv.visibility = View.VISIBLE
             }
             3 -> {
-                binding.songRepeatInactiveOn1Iv.visibility = View.GONE
+                binding.songRepeatInactiveOnOneIv.visibility = View.GONE
                 binding.songRepeatPlaylistIv.visibility = View.VISIBLE
             }
             else -> {
                 binding.songRepeatInactiveOffIv.visibility = View.VISIBLE
                 binding.songRepeatPlaylistIv.visibility = View.GONE
             }
-
-
         }
-
     }
 
     private fun setRandomStatus(isPlaying: Boolean) {
@@ -139,36 +132,35 @@ class SongActivity : AppCompatActivity() {
         private var second = 0
 
         override fun run() {
-
             try {
-
                 while (true) {
+                    if (second >= playTime) {
+                        break
+                    }
+
                     if (isPlaying) {
                         sleep(1000)
                         second++
 
                         runOnUiThread {
-                            binding.songSeekbarSb.progress = second * 1000 / playTime
+                            binding.songPlayerSb.progress = second * 1000 / playTime
                             binding.songStartTimeTv.text =
-                                String.format("%02:%02d", second / 60, second % 60)
+                                String.format("%02d:%02d", second / 60, second % 60)
                         }
-
                     }
                 }
 
-                if (second >= playTime) {
-                    break
-                }
             } catch (e: InterruptedException) {
                 Log.d("interrupt", "쓰레드가 종료되었습니다.")
             }
 
-        }
 
-        override fun onDestroy() {
-            player.interrupt()
-            super.onDestroy()
         }
-
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        player.interrupt()
+    }
+
 }

@@ -92,8 +92,8 @@
         android:id="@+id/song_album_exp2_iv"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/round"
         android:layout_marginTop="20dp"
+        android:background="@drawable/round"
         android:src="@drawable/img_album_exp2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,25 +137,26 @@
         app:layout_constraintTop_toBottomOf="@id/song_lyrics_tv" />
 
     <SeekBar
-        android:id="@+id/song_seekbar_sb"
+        android:id="@+id/song_player_sb"
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:paddingEnd="0dp"
         android:background="@null"
-        android:backgroundTint="@color/song_player"
-        android:paddingStart="0dp"
-        android:progress="500"
         android:max="1000"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="0"
+        android:progressBackgroundTint="@color/song_player_bg"
+        android:progressTint="@color/song_player"
         android:thumb="@color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_like_off_ib" />
 
     <TextView
-        android:id="@+id/song_time_start_tv"
+        android:id="@+id/song_start_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -163,17 +164,17 @@
         android:textColor="#0067a3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb" />
+        app:layout_constraintTop_toBottomOf="@id/song_player_sb" />
 
     <TextView
-        android:id="@+id/song_start_time_tv"
+        android:id="@+id/song_end_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="01:00"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb" />
+        app:layout_constraintTop_toBottomOf="@id/song_player_sb" />
 
     <LinearLayout
         android:id="@+id/song_repeat_layout"
@@ -183,35 +184,35 @@
         android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@id/song_player_related_ib"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb">
+        app:layout_constraintTop_toBottomOf="@id/song_player_sb">
 
 
-    <ImageView
-        android:id="@+id/song_repeat_inactive_off_iv"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@drawable/nugu_btn_repeat_inactive"
-        android:layout_marginEnd="30dp"/>
+        <ImageView
+            android:id="@+id/song_repeat_inactive_off_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/nugu_btn_repeat_inactive" />
 
-    <ImageView
-        android:id="@+id/song_repeat_inactive_on_iv"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:visibility="gone"
-        android:src="@drawable/btn_player_repeat_on_light"/>
+        <ImageView
+            android:id="@+id/song_repeat_inactive_on_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_player_repeat_on_light"
+            android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/song_repeat_inactive_on_one_iv"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:visibility="gone"
-        android:src="@drawable/btn_player_repeat_on1_light"/>
+        <ImageView
+            android:id="@+id/song_repeat_inactive_on_one_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_player_repeat_on1_light"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/song_repeat_playlist_iv"
@@ -219,8 +220,8 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:scaleType="fitXY"
-            android:visibility="gone"
-            android:src="@drawable/btn_playlist_repeat_playlist"/>
+            android:src="@drawable/btn_playlist_repeat_playlist"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -232,7 +233,7 @@
         android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@id/song_player_related_ib"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb">
+        app:layout_constraintTop_toBottomOf="@id/song_player_sb">
 
         <ImageView
             android:id="@+id/song_random_off_ib"
@@ -240,7 +241,7 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:scaleType="fitXY"
-            android:src="@drawable/nugu_btn_random_inactive"/>
+            android:src="@drawable/nugu_btn_random_inactive" />
 
         <ImageView
             android:id="@+id/song_random_on_ib"
@@ -248,9 +249,8 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:scaleType="fitXY"
-            android:visibility="gone"
-            android:src="@drawable/btn_player_random_on_light"/>
-
+            android:src="@drawable/btn_player_random_on_light"
+            android:visibility="gone" />
 
 
     </LinearLayout>
@@ -264,14 +264,14 @@
         app:layout_constraintBottom_toTopOf="@id/song_player_related_ib"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/song_seekbar_sb">
+        app:layout_constraintTop_toBottomOf="@id/song_player_sb">
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/song_previous_iv"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/btn_miniplayer_previous"/>
+        <ImageView
+            android:id="@+id/song_previous_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/btn_miniplayer_previous" />
 
         <ImageView
             android:id="@+id/song_miniplayer_iv"
@@ -280,18 +280,18 @@
             android:src="@drawable/btn_miniplayer_play" />
 
         <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/song_pause_iv"
-        android:visibility="gone"
-        android:src="@drawable/btn_miniplay_mvpause"/>
+            android:id="@+id/song_pause_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_miniplay_mvpause"
+            android:visibility="gone" />
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/song_next_iv"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/btn_miniplayer_next"/>
+        <ImageView
+            android:id="@+id/song_next_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/btn_miniplayer_next" />
 
     </LinearLayout>
 
