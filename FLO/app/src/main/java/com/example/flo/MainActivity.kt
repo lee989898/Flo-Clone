@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         initNavigation()
 
        val song = Song("라일락", "아이유(IU)", 215,false)
-        //setMiniPlayer(song)
+       setMiniPlayer(song)
 
         binding.mainPlayerLayout.setOnClickListener {
             val intent = Intent(this, SongActivity::class.java)
@@ -89,6 +89,11 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment())
             .commitAllowingStateLoss()
 
+    }
+
+    private fun setMiniPlayer(song: Song){
+        binding.mainMiniplayerTitleTv.text = song.title
+        binding.mainMiniplayerSingerTv.text = song.title
     }
 
 }

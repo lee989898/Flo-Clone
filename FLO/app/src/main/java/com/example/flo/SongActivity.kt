@@ -75,7 +75,7 @@ class SongActivity : AppCompatActivity() {
             && intent.hasExtra("isPlaying")
         ) {
             song.title = intent.getStringExtra("title")!!
-            song.singer = intent.getStringExtra("signer")!!
+            song.singer = intent.getStringExtra("singer")!!
             song.playTime = intent.getIntExtra("playTime", 0)
             song.isPlaying = intent.getBooleanExtra("isPlaying", false)
 
@@ -144,8 +144,7 @@ class SongActivity : AppCompatActivity() {
 
                         runOnUiThread {
                             binding.songPlayerSb.progress = second * 1000 / playTime
-                            binding.songStartTimeTv.text =
-                                String.format("%02d:%02d", second / 60, second % 60)
+                            binding.songStartTimeTv.text = String.format("%02d:%02d", second/60, second%60)
                         }
                     }
                 }
@@ -161,6 +160,7 @@ class SongActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         player.interrupt()
+
     }
 
 }
