@@ -1,7 +1,5 @@
 package com.example.flo
 
-
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -93,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setMiniPlayer(song: Song){
         binding.mainMiniplayerTitleTv.text = song.title
-        binding.mainMiniplayerSingerTv.text = song.title
+        binding.mainMiniplayerSingerTv.text = song.singer
     }
 
 }
