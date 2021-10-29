@@ -1,16 +1,22 @@
 package com.example.flo
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivitySongBinding
+import java.util.*
 
 class SongActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySongBinding
+    lateinit var timer: Timer
 
     private val song: Song = Song()
+
+    private var mediaPlayer: MediaPlayer? = null
+
     private lateinit var player: Player
     //private val handler = Handler(Looper.getMainLooper())
 
@@ -72,8 +78,10 @@ class SongActivity : AppCompatActivity() {
         ) {
             song.title = intent.getStringExtra("title")!!
             song.singer = intent.getStringExtra("singer")!!
+            song.second = intent.getIntExtra("second",0)
             song.playTime = intent.getIntExtra("playTime", 0)
             song.isPlaying = intent.getBooleanExtra("isPlaying", false)
+            song.music
 
             binding.songEndTimeTv.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
             binding.songTitleTv.text = song.title
@@ -155,8 +163,9 @@ class SongActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        player.interrupt()
-
+        player.interrupt() // 스레드 해제
+        mediaPlayer?.release() // 미디어 플레이어가 갖고 있던 리소스 해제
+        mediaPlayer = null // 미디어 플레이어 해제
     }
 
 }

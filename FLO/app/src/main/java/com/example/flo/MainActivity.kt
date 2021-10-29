@@ -92,7 +92,17 @@ class MainActivity : AppCompatActivity() {
     private fun setMiniPlayer(song: Song){
         binding.mainMiniplayerTitleTv.text = song.title
         binding.mainMiniplayerSingerTv.text = song.singer
+
+        if(song.isPlaying)
+
+
     }
 
+    override fun onStart() {
+        super.onStart()
+        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
+        val jsonSong = sharedPreferences.getString("song", null)
+
+    }
 }
 
