@@ -13,10 +13,6 @@
         app:layout_constraintBottom_toTopOf="@id/main_player_layout"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_player_layout"
         android:layout_width="match_parent"
@@ -28,7 +24,7 @@
 
         <SeekBar
             android:id="@+id/main_player_sb"
-            android:layout_width="match_parent"
+            android:layout_width="440dp"
             android:layout_height="10dp"
             android:background="@null"
             android:layout_marginStart="0dp"
