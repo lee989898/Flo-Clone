@@ -10,9 +10,11 @@
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         app:layout_constraintBottom_toTopOf="@id/main_player_layout"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,23 +25,40 @@
         android:paddingVertical="5dp"
         android:background="#F9F9F9"
         >
-        <LinearLayout
 
+        <SeekBar
+            android:id="@+id/main_player_sb"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@null"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:max="1000"
+            android:progress="0"
+            android:progressBackgroundTint="@color/song_player_bg"
+            android:progressTint="@color/song_player"
+            android:thumb="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/main_player_sb">
+
             <TextView
                 android:id="@+id/main_miniplayer_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
-
                 android:text="라일락"
-
                 android:textColor="@color/black"
                 />
             <TextView
@@ -47,7 +66,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-
                 android:text="아이유 (IU)"/>
 
         </LinearLayout>
@@ -55,9 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_player_sb"
             app:layout_constraintBottom_toBottomOf="parent"
-
             android:gravity="center_vertical">
 
             <ImageView
