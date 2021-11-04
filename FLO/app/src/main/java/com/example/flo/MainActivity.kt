@@ -101,14 +101,14 @@ class MainActivity : AppCompatActivity() {
         binding.mainMiniplayerTitleTv.text = song.title
         binding.mainMiniplayerSingerTv.text = song.singer
         binding.mainPlayerSb.progress = (song.second*1000/song.playTime)
-//        mediaPlayer = MediaPlayer.create(this,music)
+//      mediaPlayer = MediaPlayer.create(this,music)
 
         if(song.isPlaying){
             binding.mainMiniplayerBtn.visibility = View.GONE
             binding.mainPauseBtn.visibility = View.VISIBLE
         }else{
-            binding.mainMiniplayerBtn.visibility = View.GONE
-            binding.mainPauseBtn.visibility = View.VISIBLE
+            binding.mainMiniplayerBtn.visibility = View.VISIBLE
+            binding.mainPauseBtn.visibility = View.GONE
         }
     }
 
