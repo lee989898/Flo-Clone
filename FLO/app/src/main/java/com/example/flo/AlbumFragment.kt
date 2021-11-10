@@ -36,17 +36,11 @@ class AlbumFragment : Fragment() {
 
         binding.albumAlbumImgIv.clipToOutline = true
 
-
-
         binding.albumArrowBlackIb.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
         }
-
-
-
-
 
         val albumAdapter = AlbumViewpagerAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
