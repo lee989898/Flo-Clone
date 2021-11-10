@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="20dp">
 
     <androidx.cardview.widget.CardView
@@ -22,8 +21,6 @@
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/img_album_exp2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             />
     </androidx.cardview.widget.CardView>
 

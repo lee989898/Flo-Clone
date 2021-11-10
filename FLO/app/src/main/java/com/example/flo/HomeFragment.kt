@@ -11,6 +11,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.flo.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.Gson
 
 
 class HomeFragment : Fragment() {
@@ -56,10 +57,19 @@ class HomeFragment : Fragment() {
             add(Album("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
         }
 
+
         // 더미데이터랑 Adapter 연결
         val albumRVAdapter = AlbumRVAdapter(albumDates)
         // 리사이클러뷰에 어댑터를 연결
         binding.homeTodayMusicAlbumRecycleerView.adapter = albumRVAdapter
+
+        albumRVAdapter.setMyItemClickListener(object : AlbumRVAdapter.MyItemClickListener{
+
+            override fun onItemClick(album: Album) {
+                changeAlbumFragment(album)
+            }
+        })
+
         // 레이아웃 매니저 설정
         binding.homeTodayMusicAlbumRecycleerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
 
@@ -73,6 +83,18 @@ class HomeFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    private fun changeAlbumFragment(album: Album) {
+        (context as MainActivity).supportFragmentManager.beginTransaction()
+            .replace(R.id.main_frm, AlbumFragment().apply {
+                arguments = Bundle().apply {
+                    val gson = Gson()
+                    val albumJson = gson.toJson(album)
+                    putString("album", albumJson)
+                }
+            })
+            .commitAllowingStateLoss()
     }
 
     private inner class ScreenSlidePagerAdapter(fragment: HomeFragment) : FragmentStateAdapter(fragment){
