@@ -68,6 +68,10 @@ class HomeFragment : Fragment() {
             override fun onItemClick(album: Album) {
                 changeAlbumFragment(album)
             }
+
+//            override fun onRemveAlbum(position: Int) {
+//                albumRVAdapter.removeItem(position)
+//            }
         })
 
         // 레이아웃 매니저 설정
