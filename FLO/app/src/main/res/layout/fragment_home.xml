@@ -102,10 +102,11 @@
             android:layout_width="match_parent"
             android:layout_height="210dp"
             android:layout_marginTop="10dp"
-            tools:listitem="@layout/item_album"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="home_today_music_total_tv"/>
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_total_tv"/>
+<!--            tools:listitem="@layout/item_album"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintTop_toBottomOf="home_today_music_total_tv"/>-->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"
@@ -114,7 +115,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_album_recycleerView" />
 
 
         <TextView
