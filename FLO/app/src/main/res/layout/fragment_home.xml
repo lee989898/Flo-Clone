@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
         <TextView
-            android:id="@+id/home_synthesis_tv"
+            android:id="@+id/home_today_music_total_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -97,149 +97,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_spring_dots_indicator" />
 
-
-        <HorizontalScrollView
-            android:id="@+id/home_horScrollView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_today_music_album_recycleerView"
             android:layout_width="match_parent"
             android:layout_height="210dp"
             android:layout_marginTop="10dp"
-            android:overScrollMode="never"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_album_text_tv">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    app:cardElevation="0dp">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/home_today_album_01_iv"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:background="@drawable/round"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/img_album_exp2" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="LILAC"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="아이유 (IU)" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/home_today_album_02_iv"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="170dp"
-                            android:background="@drawable/round"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/dean" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="170dp"
-                            android:layout_marginTop="5dp"
-                            android:text="D (Half Moon)"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="170dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Dean" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/home_today_album_03_iv"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="340dp"
-                            android:background="@drawable/round"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cheonha" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="340dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Why Don't You Know"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="340dp"
-                            android:layout_marginTop="5dp"
-                            android:text="청하" />
-
-
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-
-            </LinearLayout>
-
-
-        </HorizontalScrollView>
-
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/home_viewpager_iv"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="100dp"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:background="@drawable/round"-->
-        <!--            android:scaleType="fitXY"-->
-        <!--            android:src="@drawable/img_home_viewpager_exp"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/home_horScrollView" />-->
-
+            tools:listitem="@layout/item_album"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="home_today_music_total_tv"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"
