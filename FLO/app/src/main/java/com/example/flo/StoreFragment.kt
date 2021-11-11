@@ -37,10 +37,20 @@ class StoreFragment: Fragment() {
             add(Store("18거 1517", "XXX (BTS)", R.drawable.language))
         }
 
+
+
         // 더미데이터랑 Adapter 연결
         val storeRVAdapter = StoreRVAdapter(storeDatas)
         // 리사이클러 뷰에 어댑터를 연결
         binding.storeRecyclyerView.adapter = storeRVAdapter
+
+        storeRVAdapter.setMyStoreClickListener(object : StoreRVAdapter.MyStoreClickListener{
+
+            override fun onRemoveStore(position: Int){
+                storeRVAdapter.removeStore(position)
+            }
+        })
+
         // 레이아웃 매니저 설정
         binding.storeRecyclyerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
