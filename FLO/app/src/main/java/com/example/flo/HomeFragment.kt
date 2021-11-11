@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
             add(Album("오래전 그날", "DNCE, WAKAWAKA", R.drawable.dnce))
             add(Album("Warm on a Cold Night", "HONNE", R.drawable.honne))
             add(Album("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp))
-            add(Album("18거 1517", "XXX (BTS)", R.drawable.language))
+            add(Album("18거 1517", "XXX", R.drawable.language))
         }
 
 

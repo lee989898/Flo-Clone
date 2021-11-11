@@ -34,7 +34,7 @@ class StoreFragment: Fragment() {
             add(Store("오래전 그날", "DNCE, WAKAWAKA", R.drawable.dnce))
             add(Store("Warm on a Cold Night", "HONNE", R.drawable.honne))
             add(Store("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp))
-            add(Store("18거 1517", "XXX (BTS)", R.drawable.language))
+            add(Store("18거 1517", "XXX", R.drawable.language))
         }
 
 
