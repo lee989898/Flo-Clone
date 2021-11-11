@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/item_constraint_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
@@ -53,17 +54,18 @@
 
     <ImageView
         android:id="@+id/store_play_iv"
-        android:layout_marginStart="180dp"
         android:layout_width="25dp"
+        android:layout_marginStart="260dp"
         android:layout_height="25dp"
         android:src="@drawable/btn_player_play"
-        app:layout_constraintStart_toEndOf="@id/store_album_title_tv"
+        app:layout_constraintStart_toEndOf="@id/store_album_cover_img_cardView"
         app:layout_constraintTop_toTopOf="@id/store_album_cover_img_cardView"
         app:layout_constraintBottom_toBottomOf="@id/store_album_cover_img_cardView"/>
 
     <ImageView
         android:id="@+id/store_option_iv"
         android:layout_width="25dp"
+        android:layout_marginEnd="20dp"
         android:layout_height="25dp"
         android:src="@drawable/btn_player_more"
         app:layout_constraintStart_toEndOf="@id/store_play_iv"

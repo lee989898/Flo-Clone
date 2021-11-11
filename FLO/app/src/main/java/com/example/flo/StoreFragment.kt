@@ -30,6 +30,9 @@ class StoreFragment: Fragment() {
             add(Store("Boy with Luv", "방탄소년단(BTS)", R.drawable.img_album_exp2))
             add(Store("BBoom BBoom", "모모랜드 (MOMOLAND)", R.drawable.img_album_exp2))
             add(Store("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
+            add(Store("TT", "트와이스 (Twice)", R.drawable.img_album_exp2))
+            add(Store("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
+            add(Store("TT", "트와이스 (Twice)", R.drawable.img_album_exp2))
         }
 
         // 더미데이터랑 Adapter 연결

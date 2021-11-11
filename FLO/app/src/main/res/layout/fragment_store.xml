@@ -20,7 +20,6 @@
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
             android:src="@drawable/btn_playlist_select_off"
-            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +31,6 @@
             android:layout_marginStart="5dp"
             android:text="전체선택"
             android:textColor="@color/black"
-            android:layout_marginTop="10dp"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/store_select_all_iv"
@@ -41,7 +39,6 @@
         <ImageView
             android:id="@+id/store_listen_all_iv"
             android:layout_width="24dp"
-            android:layout_marginTop="10dp"
             android:layout_height="24dp"
             android:layout_marginStart="25dp"
             android:src="@drawable/icon_browse_arrow_right"
@@ -54,7 +51,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
             android:text="전체듣기"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -67,7 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="10dp"
             android:text="편집"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -80,7 +75,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/store_recyclyerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="420dp"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
