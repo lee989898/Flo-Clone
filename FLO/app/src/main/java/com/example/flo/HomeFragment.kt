@@ -49,12 +49,17 @@ class HomeFragment : Fragment() {
 
         // 데이터 리스트 생성 더미 데이터
         albumDates.apply {
-            add(Album("Butter", "방탄소년단(BTS)", R.drawable.img_album_exp2))
+            add(Album("All I Wanna Do", "박재범", R.drawable.park))
             add(Album("Lilac", "아이유 (IU)", R.drawable.img_album_exp2))
-            add(Album("Next Level", "에스파 (AESPA)", R.drawable.img_album_exp2))
-            add(Album("Boy with Luv", "방탄소년단(BTS)", R.drawable.img_album_exp2))
-            add(Album("BBoom BBoom", "모모랜드 (MOMOLAND)", R.drawable.img_album_exp2))
-            add(Album("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
+            add(Album("첫눈처럼 너에게 가겠다", "에일리", R.drawable.aille))
+            add(Album("네 시", "방탄소년단 (BTS)", R.drawable.bts))
+            add(Album("Closer", "The Chainsmokers", R.drawable.chain))
+            add(Album("Why Don't You Know", "청하", R.drawable.cheonha))
+            add(Album("D (Half Moon)", "Dean", R.drawable.dean))
+            add(Album("오래전 그날", "DNCE, WAKAWAKA", R.drawable.dnce))
+            add(Album("Warm on a Cold Night", "HONNE", R.drawable.honne))
+            add(Album("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp))
+            add(Album("18거 1517", "XXX (BTS)", R.drawable.language))
         }
 
 

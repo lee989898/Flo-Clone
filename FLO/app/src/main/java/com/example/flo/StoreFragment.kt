@@ -24,15 +24,17 @@ class StoreFragment: Fragment() {
 
         // 데이터 리스트 생성 더미 데이터
         storeDatas.apply {
-            add(Store("Butter", "방탄소년단(BTS)", R.drawable.img_album_exp2))
+            add(Store("All I Wanna Do", "박재범", R.drawable.park))
             add(Store("Lilac", "아이유 (IU)", R.drawable.img_album_exp2))
-            add(Store("Next Level", "에스파 (AESPA)", R.drawable.img_album_exp2))
-            add(Store("Boy with Luv", "방탄소년단(BTS)", R.drawable.img_album_exp2))
-            add(Store("BBoom BBoom", "모모랜드 (MOMOLAND)", R.drawable.img_album_exp2))
-            add(Store("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
-            add(Store("TT", "트와이스 (Twice)", R.drawable.img_album_exp2))
-            add(Store("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp2))
-            add(Store("TT", "트와이스 (Twice)", R.drawable.img_album_exp2))
+            add(Store("첫눈처럼 너에게 가겠다", "에일리", R.drawable.aille))
+            add(Store("네 시", "방탄소년단 (BTS)", R.drawable.bts))
+            add(Store("Closer", "The Chainsmokers", R.drawable.chain))
+            add(Store("Why Don't You Know", "청하", R.drawable.cheonha))
+            add(Store("D (Half Moon)", "Dean", R.drawable.dean))
+            add(Store("오래전 그날", "DNCE, WAKAWAKA", R.drawable.dnce))
+            add(Store("Warm on a Cold Night", "HONNE", R.drawable.honne))
+            add(Store("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp))
+            add(Store("18거 1517", "XXX (BTS)", R.drawable.language))
         }
 
         // 더미데이터랑 Adapter 연결
