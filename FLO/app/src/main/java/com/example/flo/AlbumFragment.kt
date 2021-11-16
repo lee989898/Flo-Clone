@@ -34,9 +34,9 @@ class AlbumFragment : Fragment() {
         // Home 에서 넘어온 데이터를 반영
         setInit(album)
 
-        binding.albumAlbumImgIv.clipToOutline = true
+        binding.albumAlbumIv.clipToOutline = true
 
-        binding.albumArrowBlackIb.setOnClickListener{
+        binding.albumBackIv.setOnClickListener{
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
@@ -54,9 +54,9 @@ class AlbumFragment : Fragment() {
     }
 
     private fun setInit(album: Album) {
-        binding.albumAlbumImgIv.setImageResource(album.coverImg!!)
-        binding.albumAlbumNameTv.text = album.title.toString()
-        binding.albumSingerTv.text = album.singer.toString()
+        binding.albumAlbumIv.setImageResource(album.coverImg!!)
+        binding.albumMusicTitleTv.text = album.title.toString()
+        binding.albumSingerNameTv.text = album.singer.toString()
     }
 
 

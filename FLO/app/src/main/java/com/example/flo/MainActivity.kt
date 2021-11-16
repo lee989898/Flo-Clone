@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initNavigation()
+        inputDumpySongs()
 
        val song = Song("라일락", "아이유(IU)",0, 215,false,"music_lilac")
        setMiniPlayer(song)
@@ -114,15 +115,104 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
-        val jsonSong = sharedPreferences.getString("song", null)
-        song = if(jsonSong == null){
-            Song("라일락", "아이유(IU)",0, 215,false,"music_lilac")
+
+        val sqf = getSharedPreferences("song", MODE_PRIVATE)
+        val songId = sqf.getInt("songId", 0)
+
+        val songDB = SongDatabase. getInstance(this)!!
+        song = if(songId == 0){
+            songDB.SongDao().getSong(1)
         }else{
-            gson.fromJson(jsonSong, Song::class.java)
+            songDB.SongDao().getSong(songId)
         }
+
 
         setMiniPlayer(song)
     }
+
+    private fun inputDumpySongs(){
+        val songDB = SongDatabase.getInstance(this)!!
+        val songs = songDB.SongDao().getSongs()
+
+        if(songs.isNotEmpty()) return
+
+        songDB.SongDao().insert(
+            Song(
+                "Lilac",
+                "아이유 (IU)",
+                0,
+                200,
+                false,
+                "music_lilac",
+                R.drawable.img_album_exp2,
+                false
+            )
+        )
+
+        songDB.SongDao().insert(
+            Song(
+                "Butter",
+                "방탄소년단 (BTS)",
+                0,
+                190,
+                false,
+                "music_lilac",
+                R.drawable.img_album_exp,
+                false
+            )
+        )
+
+        songDB.SongDao().insert(
+            Song(
+                "Next Level",
+                "에스파 (AESPA)",
+                0,
+                210,
+                false,
+                "music_lilac",
+                R.drawable.img_album_exp3,
+                false
+            )
+        )
+
+        songDB.SongDao().insert(
+            Song(
+                "Boy with Luv",
+                "방탄소년단 (BTS)",
+                0,
+                230,
+                false,
+                "music_lilac",
+                R.drawable.img_album_exp4,
+                false
+            )
+        )
+
+        songDB.SongDao().insert(Song(
+            "BBoom BBoom",
+            "모모랜드 (MOMOLAND)",
+            0,
+            240,
+            false,
+            "music_lilac",
+            R.drawable.img_album_exp5,
+            false
+        )
+        )
+
+        songDB.SongDao().insert(Song(
+            "Weekend",
+            "태연 (Tae Yeon)",
+            0,
+            210,
+            false,
+            "music_lilac",
+            R.drawable.img_album_exp6,
+            false
+        )
+        )
+
+    }
+
 }
 
