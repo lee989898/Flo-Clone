@@ -51,31 +51,27 @@ class SongActivity : AppCompatActivity() {
             mediaPlayer?.pause()
         }
 
-        binding.songRepeatInactiveOffIv.setOnClickListener {
+        binding.songRepeatOffIv.setOnClickListener {
             setRepeatStatus(1)
         }
 
-        binding.songRepeatInactiveOnIv.setOnClickListener {
+        binding.songRepeatAllIv.setOnClickListener {
             setRepeatStatus(2)
         }
 
-        binding.songRepeatInactiveOnOneIv.setOnClickListener {
+        binding.songRepeatOneIv.setOnClickListener {
             setRepeatStatus(3)
         }
 
-        binding.songRepeatPlaylistIv.setOnClickListener {
-            setRepeatStatus(4)
-        }
-
-        binding.songRandomOffIb.setOnClickListener {
+        binding.songRandomOffIv.setOnClickListener {
             setRandomStatus(false)
         }
 
-        binding.songRandomOnIb.setOnClickListener {
+        binding.songRandomOnIv.setOnClickListener {
             setRandomStatus(true)
         }
 
-        binding.songAlbumExp2Iv.clipToOutline = true
+        binding.songAlbumIv.clipToOutline = true
 
     }
 
@@ -92,8 +88,8 @@ class SongActivity : AppCompatActivity() {
             val music = resources.getIdentifier(song.music, "raw", this.packageName)
 
             binding.songEndTimeTv.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
-            binding.songTitleTv.text = song.title
-            binding.songNameTv.text = song.singer
+            binding.songMusicTitleTv.text = song.title
+            binding.songSingerNameTv.text = song.singer
             setPlayerStatus(song.isPlaying)
             mediaPlayer = MediaPlayer.create(this, music)
         }
@@ -112,32 +108,28 @@ class SongActivity : AppCompatActivity() {
     private fun setRepeatStatus(repeatWhat: Int) {
         when (repeatWhat) {
             1 -> {
-                binding.songRepeatInactiveOffIv.visibility = View.GONE
-                binding.songRepeatInactiveOnIv.visibility = View.VISIBLE
+                binding.songRepeatOffIv.visibility = View.GONE
+                binding.songRepeatAllIv.visibility = View.VISIBLE
 
             }
             2 -> {
-                binding.songRepeatInactiveOnIv.visibility = View.GONE
-                binding.songRepeatInactiveOnOneIv.visibility = View.VISIBLE
-            }
-            3 -> {
-                binding.songRepeatInactiveOnOneIv.visibility = View.GONE
-                binding.songRepeatPlaylistIv.visibility = View.VISIBLE
+                binding.songRepeatAllIv.visibility = View.GONE
+                binding.songRepeatOneIv.visibility = View.VISIBLE
             }
             else -> {
-                binding.songRepeatInactiveOffIv.visibility = View.VISIBLE
-                binding.songRepeatPlaylistIv.visibility = View.GONE
+                binding.songRepeatOneIv.visibility = View.GONE
+                binding.songRepeatOffIv.visibility = View.VISIBLE
             }
         }
     }
 
     private fun setRandomStatus(isPlaying: Boolean) {
         if (isPlaying) {
-            binding.songRandomOffIb.visibility = View.VISIBLE
-            binding.songRandomOnIb.visibility = View.GONE
+            binding.songRandomOffIv.visibility = View.VISIBLE
+            binding.songRandomOnIv.visibility = View.GONE
         } else {
-            binding.songRandomOffIb.visibility = View.GONE
-            binding.songRandomOnIb.visibility = View.VISIBLE
+            binding.songRandomOffIv.visibility = View.GONE
+            binding.songRandomOnIv.visibility = View.VISIBLE
         }
     }
 
@@ -156,7 +148,7 @@ class SongActivity : AppCompatActivity() {
                         second++
 
                         runOnUiThread {
-                            binding.songPlayerSb.progress = second * 1000 / playTime
+                            binding.musicplayerProgressSb.progress = second * 1000 / playTime
                             binding.songStartTimeTv.text = String.format("%02d:%02d", second/60, second%60)
                         }
                     }
@@ -175,7 +167,7 @@ class SongActivity : AppCompatActivity() {
         mediaPlayer?.pause() // 미디어 플레이어 중지
         player.isPlaying = false // 스레드 중지
         song.isPlaying = false
-        song.second = (binding.songPlayerSb.progress*song.playTime)/1000
+        song.second = (binding.musicplayerProgressSb.progress*song.playTime)/1000
         setPlayerStatus(false) // 정지상태일 때의 이미지로 전환
 
         val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)

@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.mainMiniplayerBtn.setOnClickListener {
+        binding.mainMiniplayerPlayIv.setOnClickListener {
             setMiniPlayerStatus(false)
         }
 
-        binding.mainPauseBtn.setOnClickListener {
+        binding.mainMiniplayerPauseIv.setOnClickListener {
             setMiniPlayerStatus(true)
         }
 
@@ -83,11 +83,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setMiniPlayerStatus(isPlaying: Boolean) {
         if (isPlaying) {
-            binding.mainMiniplayerBtn.visibility = View.VISIBLE
-            binding.mainPauseBtn.visibility = View.GONE
+            binding.mainMiniplayerPlayIv.visibility = View.VISIBLE
+            binding.mainMiniplayerPauseIv.visibility = View.GONE
         } else {
-            binding.mainMiniplayerBtn.visibility = View.GONE
-            binding.mainPauseBtn.visibility = View.VISIBLE
+            binding.mainMiniplayerPlayIv.visibility = View.GONE
+            binding.mainMiniplayerPauseIv.visibility = View.VISIBLE
         }
     }
 
@@ -100,15 +100,15 @@ class MainActivity : AppCompatActivity() {
     private fun setMiniPlayer(song: Song){
         binding.mainMiniplayerTitleTv.text = song.title
         binding.mainMiniplayerSingerTv.text = song.singer
-        binding.mainPlayerSb.progress = (song.second*1000/song.playTime)
+        binding.mainProgressSb.progress = (song.second*1000/song.playTime)
 //      mediaPlayer = MediaPlayer.create(this,music)
 
         if(song.isPlaying){
-            binding.mainMiniplayerBtn.visibility = View.GONE
-            binding.mainPauseBtn.visibility = View.VISIBLE
+            binding.mainMiniplayerPlayIv.visibility = View.GONE
+            binding.mainMiniplayerPauseIv.visibility = View.VISIBLE
         }else{
-            binding.mainMiniplayerBtn.visibility = View.VISIBLE
-            binding.mainPauseBtn.visibility = View.GONE
+            binding.mainMiniplayerPlayIv.visibility = View.VISIBLE
+            binding.mainMiniplayerPauseIv.visibility = View.GONE
         }
     }
 
