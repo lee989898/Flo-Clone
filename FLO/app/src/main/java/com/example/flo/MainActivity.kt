@@ -121,9 +121,9 @@ class MainActivity : AppCompatActivity() {
 
         val songDB = SongDatabase. getInstance(this)!!
         song = if(songId == 0){
-            songDB.SongDao().getSong(1)
+            songDB.songDao().getSong(1)
         }else{
-            songDB.SongDao().getSong(songId)
+            songDB.songDao().getSong(songId)
         }
 
 
@@ -132,11 +132,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun inputDumpySongs(){
         val songDB = SongDatabase.getInstance(this)!!
-        val songs = songDB.SongDao().getSongs()
+        val songs = songDB.songDao().getSongs()
 
         if(songs.isNotEmpty()) return
 
-        songDB.SongDao().insert(
+        songDB.songDao().insert(
             Song(
                 "Lilac",
                 "아이유 (IU)",
@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        songDB.SongDao().insert(
+        songDB.songDao().insert(
             Song(
                 "Butter",
                 "방탄소년단 (BTS)",
@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        songDB.SongDao().insert(
+        songDB.songDao().insert(
             Song(
                 "Next Level",
                 "에스파 (AESPA)",
@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        songDB.SongDao().insert(
+        songDB.songDao().insert(
             Song(
                 "Boy with Luv",
                 "방탄소년단 (BTS)",
@@ -188,7 +188,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        songDB.SongDao().insert(Song(
+        songDB.songDao().insert(Song(
             "BBoom BBoom",
             "모모랜드 (MOMOLAND)",
             0,
@@ -200,7 +200,7 @@ class MainActivity : AppCompatActivity() {
         )
         )
 
-        songDB.SongDao().insert(Song(
+        songDB.songDao().insert(Song(
             "Weekend",
             "태연 (Tae Yeon)",
             0,
