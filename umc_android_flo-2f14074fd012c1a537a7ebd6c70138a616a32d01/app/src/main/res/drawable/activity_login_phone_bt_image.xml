@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="20dp"
+        android:height="20dp"
+        android:drawable="@drawable/btn_setting_phone" />
+
+</layer-list>

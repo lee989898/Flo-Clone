@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_down_et_image.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_look_et_image.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_phone_bt_image.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_t_bt_image.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_login.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_sign_up.xml" value="0.1793478260869565" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
