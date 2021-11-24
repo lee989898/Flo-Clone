@@ -28,8 +28,13 @@ class AlbumFragment : Fragment() {
 
         val albumData = arguments?.getString("album")
         val album = gson.fromJson(albumData, Album::class.java)
+        isLiked = isLikedAlbum(album.id)
+
+
 
         setViews(album)
+        setClickListeners(album)
+
         //ROOM_DB
         val songs = getSongs(album.id) //앨범안에 있는 수록곡들을 불러옵니다.
         // 이 다음에 수록곡 프래그먼트에 songs을 전달해주는 식으로 사용하시면 됩니다.
@@ -101,6 +106,7 @@ class AlbumFragment : Fragment() {
     private fun disLikedAlbum(userId: Int, albumId: Int){
         val songDB = SongDatabase.getInstance(requireContext())!!
         songDB.albumDao().disLikeAlbum(userId, albumId)
+
 
     }
 
