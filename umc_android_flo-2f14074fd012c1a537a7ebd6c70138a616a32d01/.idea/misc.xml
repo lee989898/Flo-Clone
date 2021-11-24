@@ -4,11 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_login.xml" value="0.2441123188405797" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_main.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_sign_up.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_song.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/activity_splash.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_album.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_banner.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_detail.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_home.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_locker.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_locker_musicfile.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_locker_savedalbum.xml" value="0.21875" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_locker_savedsong.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_look.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_search.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_song.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/fragment_video.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/item_album.xml" value="0.21875" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/item_locker_album.xml" value="0.15760869565217392" />
+        <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/item_song.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/joon_/Desktop/Flo-Clone/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/layout/itme_locker_album.xml" value="0.21875" />
         <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_down_et_image.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/joon_/Desktop/umc_android_flo-2f14074fd012c1a537a7ebd6c70138a616a32d01/app/src/main/res/drawable/activity_login_look_et_image.xml" value="0.26979166666666665" />

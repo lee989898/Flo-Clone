@@ -46,13 +46,17 @@ class LoginActivity : AppCompatActivity() {
 
         val user = songDB.userDao().getUser(email, pwd)
 
+
+
         user?.let {
             Log.d("LOGINACT/GET_USER", "userId: ${user.id}, $user")
             // 발급받은 jwt를 저장해주는 함수
             saveJwt(user.id)
         }
 
-        Toast.makeText(this, "회원정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+        if(user == null) {
+            Toast.makeText(this, "회원정보가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
