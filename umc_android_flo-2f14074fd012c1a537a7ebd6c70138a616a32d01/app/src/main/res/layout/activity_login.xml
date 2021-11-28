@@ -41,6 +41,17 @@
         app:layout_constraintEnd_toStartOf="@id/login_at_et"
         app:layout_constraintTop_toBottomOf="@id/login_flo_logo_iv" />
 
+    <View
+        android:id="@+id/login_id_underscore_view"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="#a8a8a8"
+        app:layout_constraintEnd_toEndOf="@id/login_id_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/login_id_et"
+        app:layout_constraintTop_toBottomOf="@id/login_id_et" />
+
     <TextView
         android:id="@+id/login_at_et"
         android:layout_width="wrap_content"
@@ -70,6 +81,17 @@
         app:layout_constraintStart_toEndOf="@id/login_at_et"
         app:layout_constraintTop_toTopOf="@id/login_id_et" />
 
+    <View
+        android:id="@+id/login_email_underscore_view"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="#a8a8a8"
+        app:layout_constraintEnd_toEndOf="@id/login_email_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/login_email_et"
+        app:layout_constraintTop_toBottomOf="@id/login_email_et" />
+
     <EditText
         android:id="@+id/login_password_et"
         android:layout_width="0dp"
@@ -87,18 +109,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_id_et" />
 
+
+    <View
+        android:id="@+id/login_password_underscore_view"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="#a8a8a8"
+        app:layout_constraintEnd_toEndOf="@id/login_password_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/login_password_et"
+        app:layout_constraintTop_toBottomOf="@id/login_password_et" />
+
+    <TextView
+        android:id="@+id/login_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/login_password_underscore_view"
+        />
+
     <Button
         android:id="@+id/login_login_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:textStyle="bold"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="로그인"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_password_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_password_underscore_view" />
+
+    <ProgressBar
+        android:id="@+id/login_loading_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/login_login_bt"
+        app:layout_constraintStart_toStartOf="@id/login_login_bt"
+        app:layout_constraintEnd_toEndOf="@id/login_login_bt"
+        android:visibility="gone"
         />
 
     <TextView

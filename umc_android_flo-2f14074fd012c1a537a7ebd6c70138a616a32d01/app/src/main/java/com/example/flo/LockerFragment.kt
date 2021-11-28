@@ -45,7 +45,7 @@ class LockerFragment : Fragment() {
     }
 
     private fun initView(){
-        val jwt =  getJwt()//jwt를 가져오는 함수
+        val jwt =  getUserIdx(requireContext())//jwt를 가져오는 함수
 
         if(jwt == 0){
             binding.lockerLoginTv.text = "로그인"

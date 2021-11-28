@@ -1,4 +1,7 @@
 package com.example.flo
 
-class LoginView {
+interface LoginView {
+    fun onLoginLoading()
+    fun onLoginSuccess(auth: Auth)
+    fun onLoginFailure(code: Int, message: String)
 }

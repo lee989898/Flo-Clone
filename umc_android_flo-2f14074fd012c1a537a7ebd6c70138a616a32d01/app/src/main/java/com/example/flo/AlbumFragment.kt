@@ -72,7 +72,7 @@ class AlbumFragment : Fragment() {
     }
 
     private fun setClickListeners(album: Album){
-        val userId: Int = getJwt()
+        val userId: Int = getUserIdx(requireContext())
 
         binding.albumLikeIv.setOnClickListener {
             if(isLiked){
@@ -95,7 +95,7 @@ class AlbumFragment : Fragment() {
 
     private fun isLikedAlbum(albumId: Int): Boolean{
         val songDB = SongDatabase.getInstance(requireContext())!!
-        val userId = getJwt()
+        val userId = getUserIdx(requireContext())
 
         val likeId: Int? = songDB.albumDao().isLikeAlbum(userId, albumId)
 

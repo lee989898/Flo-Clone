@@ -11,7 +11,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity(), SignUpView {
     lateinit var binding: ActivitySignUpBinding
 
 
@@ -20,7 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.signUpRegister.setOnClickListener {
+        binding.singUpSignUpBtn.setOnClickListener {
             signUp()
             finish()
         }
@@ -71,32 +71,39 @@ class SignUpActivity : AppCompatActivity() {
             return
         }
 
-        val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
+        val authService = AuthService()
+        authService.setSignUpView(this)
 
-        authService.signUp(getUser()).enqueue(object : Callback<AuthResponse>{
-            override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                Log.d("SIGNUPACT/API-RESPONSE", response.toString())
-
-                val resp = response.body()!!
-
-
-                when(resp.code){
-                    1000 -> finish()
-                    2016, 2017 -> {
-                        binding.signUpEmailErrorTv.visibility = View.VISIBLE
-                        binding.signUpEmailErrorTv.text = resp.message
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<AuthResponse>, t: Throwable){
-                Log.d("SIGNUPACT/API-ERROR", t.message.toString())
-            }
-        })
+        authService.signUp(getUser())
 
         Log.d("SIGNUPACT/ASYNC", "Hello, ")
 
 
     }
 
+
+
+    override fun onSignUpLoading() {
+        binding.signUpLoadingPb.visibility = View.VISIBLE
+    }
+
+    override fun onSignUpSuccess() {
+        binding.signUpLoadingPb.visibility = View.GONE
+
+        finish()
+    }
+
+    override fun onSignUpFailure(code: Int, message: String) {
+        binding.signUpLoadingPb.visibility = View.GONE
+
+
+        when( code ){
+            2000 -> {}
+            2016, 2017 -> {
+                binding.signUpEmailErrorTv.visibility = View.VISIBLE
+                binding.signUpEmailErrorTv.text = message
+            }
+        }
+
+    }
 }

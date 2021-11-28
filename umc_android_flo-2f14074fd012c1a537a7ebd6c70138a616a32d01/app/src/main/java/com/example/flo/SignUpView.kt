@@ -1,4 +1,7 @@
 package com.example.flo
 
-class SignUpView {
+interface SignUpView {
+    fun onSignUpLoading()
+    fun onSignUpSuccess()
+    fun onSignUpFailure(code: Int, message: String)
 }
