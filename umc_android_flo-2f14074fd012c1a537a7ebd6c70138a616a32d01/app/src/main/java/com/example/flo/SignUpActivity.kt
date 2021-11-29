@@ -22,7 +22,6 @@ class SignUpActivity : AppCompatActivity(), SignUpView {
 
         binding.singUpSignUpBtn.setOnClickListener {
             signUp()
-            finish()
         }
 
     }
@@ -73,10 +72,12 @@ class SignUpActivity : AppCompatActivity(), SignUpView {
 
         val authService = AuthService()
         authService.setSignUpView(this)
-
         authService.signUp(getUser())
 
+
+
         Log.d("SIGNUPACT/ASYNC", "Hello, ")
+
 
 
     }

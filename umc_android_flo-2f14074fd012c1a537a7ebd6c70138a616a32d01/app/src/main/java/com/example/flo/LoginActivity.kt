@@ -78,6 +78,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
         val email: String = binding.loginIdEt.text.toString() + "@" + binding.loginEmailEt.text.toString()
         val password: String = binding.loginPasswordEt.text.toString()
         val user = User(email, password, "")
+
         val authService = AuthService()
         authService.setLoginView(this)
 

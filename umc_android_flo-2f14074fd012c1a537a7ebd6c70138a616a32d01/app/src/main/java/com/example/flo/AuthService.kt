@@ -1,5 +1,7 @@
 package com.example.flo
 
+import android.util.Log
+import android.view.View
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,21 +23,23 @@ class AuthService {
 
         signUpView.onSignUpLoading()
 
-        authService.signUp(user).enqueue(object : Callback<AuthResponse> {
+        authService.signUp(user).enqueue(object : Callback<AuthResponse>{
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                Log.d("SIGNUPACT/API-RESPONSE", response.toString())
 
                 val resp = response.body()!!
 
-                when (resp.code) {
+                Log.d("SIGNUPACT/RESPONSE-FLO", resp.toString())
+
+                when(resp.code) {
                     1000 -> signUpView.onSignUpSuccess()
                     else -> signUpView.onSignUpFailure(resp.code, resp.message)
                 }
             }
 
-
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-
-                signUpView.onSignUpFailure(400, "네트워크 오류가 발생했습니다")
+                Log.d("SIGNUPACT/API-ERROR", t.toString())
+                signUpView.onSignUpFailure(400, "네트워크 오류가 발생했습니다.")
             }
 
         })
